@@ -6,111 +6,72 @@ on:
       - deploy-github  # Trigger on push to the deploy-github branch
   workflow_dispatch:  # Allow manual trigger from the Actions tab
 
+# Permissions for writing to the repository
 permissions:
-  contents: write  # Permissions for writing to the repository
+  contents: write
 
 jobs:
-  checkout:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository manually
+      # Step 1: Checkout the repository manually using HTTPS
       - name: Checkout repository
         run: |
           git clone https://github.com/${{ github.repository }} .
-          git checkout deploy-github  # Ensure we're on the correct branch
-          echo "Current directory: $(pwd)"
-          ls -la  # Debug contents
-      # Persist the cloned repo for the next job, excluding .git
-      - name: Upload repository artifact
-        run: |
-          # Archive only the necessary files, excluding .git to avoid changes
-          tar -czf repo.tar.gz --exclude=.git .
-          mv repo.tar.gz /tmp/repo.tar.gz
-          ls -la /tmp  # Verify artifact exists
-
-  build:
-    runs-on: ubuntu-latest
-    needs: checkout  # Depends on checkout job
-    steps:
-      # Step 2: Download the checked-out repo and build
-      - name: Download repository artifact
-        run: |
-          mv /tmp/repo.tar.gz .
-          tar -xzf repo.tar.gz
-          rm repo.tar.gz
-          echo "Current directory: $(pwd)"
-          ls -la
-
+          pwd  # Log current directory for debugging
+          ls -la  # List contents for debugging
+      # Step 2: Set up Node.js manually with sudo
       - name: Set up Node.js
         run: |
           curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
           sudo apt-get install -y nodejs
-          node --version  # Should be 22.x
-          npm --version   # Verify npm
-
+          node --version  # Verify Node.js version (22.9.0)
+          npm --version  # Verify npm is installed
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install || exit 1
 
+      # Step 4: Build the Vue app
       - name: Build the app
         run: |
           npm run build
-          ls -la dist/ || echo "dist/ directory not found"  # Verify build output
-
-      # Persist the build output for the deploy job
-      - name: Upload build artifact
-        run: |
-          tar -czf dist.tar.gz dist
-          mv dist.tar.gz /tmp/dist.tar.gz
-          ls -la /tmp  # Verify artifact exists
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build  # Depends on build job
-    steps:
-      # Step 3: Deploy to gh-pages branch
-      - name: Download build artifact
-        run: |
-          mv /tmp/dist.tar.gz .
-          tar -xzf dist.tar.gz
-          rm dist.tar.gz
-          echo "Current directory: $(pwd)"
-          ls -la dist/
-
-      - name: Clone repo for deployment
-        run: |
-          git clone https://github.com/${{ github.repository }} .
-          git fetch
-
+          ls -la dist/ || echo "dist/ directory not found"  # Check if dist/ exists
+      # Step 5: Preserve dist/ and deploy to gh-pages branch
       - name: Deploy to gh-pages branch
         run: |
+          # Move dist/ to a temporary location to preserve it
+          mv dist /tmp/dist-tmp
+          ls -la /tmp/dist-tmp/ || echo "dist-tmp not found"  # Verify move worked
           # Configure git
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
-
-          # Switch to gh-pages branch (create if it doesn't exist)
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          
+          # Check if gh-pages branch exists, create it if not
+          git fetch
           if git show-ref --quiet refs/heads/gh-pages; then
             git checkout gh-pages
           else
             git checkout --orphan gh-pages
-            git rm -rf .  # Clear the branch if newly created
           fi
-
-          # Debug current state
-          echo "Current directory: $(pwd)"
+          
+          # Debug current directory
+          pwd
           ls -la
-
-          # Move build output to root and clean up
-          rm -rf ./*  # Remove existing files in gh-pages
-          mv dist/* . || { echo "Failed to move dist/*"; exit 1; }
-          rm -rf dist  # Remove the now-empty dist folder
-
-          # Verify files are in place
-          ls -la
-
+          
+          # Remove old files and copy new build output from tmp
+          rm -rf ./*
+          cp -r /tmp/dist-tmp/* . || { echo "Failed to copy /tmp/dist-tmp/*"; exit 1; }
+          ls -la  # Verify files are copied
+          
+          # Clean up temporary directory
+          rm -rf /tmp/dist-tmp
+          
+          # Configure remote URL with GITHUB_TOKEN for authentication
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          
           # Commit and push to gh-pages
           git add .
-          git commit -m "Deploy to GitHub Pages from deploy-github branch" || echo "Nothing to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -m "Deploy to GitHub Pages from deploy-github branch"
           git push origin gh-pages --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
