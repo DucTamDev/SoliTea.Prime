@@ -6,6 +6,10 @@ on:
       - deploy-github  # Trigger on push to the deploy-github branch
   workflow_dispatch:  # Allow manual trigger from the Actions tab
 
+# Permissions for writing to the repository
+permissions:
+  contents: write
+
 jobs:
   checkout:
     runs-on: ubuntu-latest
@@ -74,9 +78,6 @@ jobs:
           rm -rf ./*
           cp -r /tmp/dist-tmp/* . || { echo "Failed to copy /tmp/dist-tmp/*"; exit 1; }
           ls -la  # Verify files are copied
-          
-          # Ensure index.html is there
-          cat index.html || echo "index.html not found"
           
           # Clean up temporary directory
           rm -rf /tmp/dist-tmp
