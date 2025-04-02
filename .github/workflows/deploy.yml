@@ -16,15 +16,20 @@ jobs:
             # Stage 1: Checkout the repository
             - name: Checkout repository
               run: |
+                  mkdir repo-checkout
+                  cd repo-checkout
                   git clone https://github.com/${{ github.repository }} .
                   git checkout deploy-github  # Ensure we're on the correct branch
                   echo "Current directory: $(pwd)"
                   ls -la  # Debug contents
-            # Persist the cloned repo for the next job
+            # Persist the cloned repo for the next job, excluding .git
             - name: Upload repository artifact
               run: |
-                  tar -czf repo.tar.gz .
+                  cd repo-checkout
+                  # Archive everything except .git to avoid changes during tar
+                  tar -czf repo.tar.gz --exclude=.git .
                   mv repo.tar.gz /tmp/repo.tar.gz
+                  ls -la /tmp  # Verify artifact exists
 
     build:
         runs-on: ubuntu-latest
@@ -33,8 +38,8 @@ jobs:
             # Stage 2: Download the checked-out repo and build
             - name: Download repository artifact
               run: |
-                  mkdir repo
-                  cd repo
+                  mkdir repo-build
+                  cd repo-build
                   mv /tmp/repo.tar.gz .
                   tar -xzf repo.tar.gz
                   rm repo.tar.gz
@@ -50,21 +55,22 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  cd repo
+                  cd repo-build
                   npm install || exit 1
 
             - name: Build the app
               run: |
-                  cd repo
+                  cd repo-build
                   npm run build
                   ls -la dist/ || echo "dist/ directory not found"  # Verify build output
 
             # Persist the build output for the deploy job
             - name: Upload build artifact
               run: |
-                  cd repo
+                  cd repo-build
                   tar -czf dist.tar.gz dist
                   mv dist.tar.gz /tmp/dist.tar.gz
+                  ls -la /tmp  # Verify artifact exists
 
     deploy:
         runs-on: ubuntu-latest
