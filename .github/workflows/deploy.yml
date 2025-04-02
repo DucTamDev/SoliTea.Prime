@@ -6,48 +6,68 @@ on:
       - deploy-github  # Trigger on push to the deploy-github branch
   workflow_dispatch:  # Allow manual trigger from the Actions tab
 
+# Set permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    # Step 1: Checkout the repository manually using HTTPS
-    - name: Checkout repository
-      run: git clone https://github.com/${{ github.repository }} .
+      # Step 1: Checkout the repository manually using HTTPS
+      - name: Checkout repository
+        run: git clone https://github.com/${{ github.repository }} .
 
-    # Step 2: Set up Node.js manually with sudo
-    - name: Set up Node.js
-      run: |
-        curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-        sudo apt-get install -y nodejs
+      # Step 2: Set up Node.js manually with sudo
+      - name: Set up Node.js
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+          sudo apt-get install -y nodejs
+          node --version  # Verify Node.js version (22.9.0)
 
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: npm install
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    # Step 4: Build the Vue app
-    - name: Build the app
-      run: npm run build
+      # Step 4: Build the Vue app
+      - name: Build the app
+        run: npm run build
 
-    # Step 5: Move build output to shared workspace
-    - name: Move build output
-      run: |
-        mkdir -p /tmp/build-artifact
-        cp -r dist/* /tmp/build-artifact/
+      # Step 5: Upload build output as an artifact
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+          retention-days: 1
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    # Step 6: Copy artifact from workspace
-    - name: Copy artifact from build job
-      run: |
-        mkdir -p /var/www/html/
-        cp -r /tmp/build-artifact/* /var/www/html/
+      # Step 6: Download the build artifact
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
 
-    # Step 7: Configure GitHub Pages
-    - name: Configure GitHub Pages
-      run: |
-        mkdir -p /var/www/html/.github/pages
-        echo "Deployment successful" > /var/www/html/.github/pages/index.html
+      # Step 7: Setup GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Step 8: Upload artifact for GitHub Pages deployment
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+      # Step 9: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
