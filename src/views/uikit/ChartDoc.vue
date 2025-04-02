@@ -79,8 +79,16 @@ function setColorOptions() {
         datasets: [
             {
                 data: [540, 325, 702],
-                backgroundColor: [documentStyle.getPropertyValue('--p-indigo-500'), documentStyle.getPropertyValue('--p-purple-500'), documentStyle.getPropertyValue('--p-teal-500')],
-                hoverBackgroundColor: [documentStyle.getPropertyValue('--p-indigo-400'), documentStyle.getPropertyValue('--p-purple-400'), documentStyle.getPropertyValue('--p-teal-400')]
+                backgroundColor: [
+                    documentStyle.getPropertyValue('--p-indigo-500'),
+                    documentStyle.getPropertyValue('--p-purple-500'),
+                    documentStyle.getPropertyValue('--p-teal-500')
+                ],
+                hoverBackgroundColor: [
+                    documentStyle.getPropertyValue('--p-indigo-400'),
+                    documentStyle.getPropertyValue('--p-purple-400'),
+                    documentStyle.getPropertyValue('--p-teal-400')
+                ]
             }
         ]
     };
@@ -152,7 +160,12 @@ function setColorOptions() {
         datasets: [
             {
                 data: [11, 16, 7, 3],
-                backgroundColor: [documentStyle.getPropertyValue('--p-indigo-500'), documentStyle.getPropertyValue('--p-purple-500'), documentStyle.getPropertyValue('--p-teal-500'), documentStyle.getPropertyValue('--p-orange-500')],
+                backgroundColor: [
+                    documentStyle.getPropertyValue('--p-indigo-500'),
+                    documentStyle.getPropertyValue('--p-purple-500'),
+                    documentStyle.getPropertyValue('--p-teal-500'),
+                    documentStyle.getPropertyValue('--p-orange-500')
+                ],
                 label: 'My dataset'
             }
         ],
@@ -231,37 +244,37 @@ watch(
     <Fluid class="grid grid-cols-12 gap-8">
         <div class="col-span-12 xl:col-span-6">
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Linear</div>
+                <div class="mb-4 text-xl font-semibold">Linear</div>
                 <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Bar</div>
+                <div class="mb-4 text-xl font-semibold">Bar</div>
                 <Chart type="bar" :data="barData" :options="barOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Pie</div>
+                <div class="mb-4 text-xl font-semibold">Pie</div>
                 <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Doughnut</div>
+                <div class="mb-4 text-xl font-semibold">Doughnut</div>
                 <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Polar Area</div>
+                <div class="mb-4 text-xl font-semibold">Polar Area</div>
                 <Chart type="polarArea" :data="polarData" :options="polarOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="card flex flex-col items-center">
-                <div class="font-semibold text-xl mb-4">Radar</div>
+                <div class="mb-4 text-xl font-semibold">Radar</div>
                 <Chart type="radar" :data="radarData" :options="radarOptions"></Chart>
             </div>
         </div>

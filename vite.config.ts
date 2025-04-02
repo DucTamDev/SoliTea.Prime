@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
     console.log('environment: ', mode);
 
     return {
+        base: './',
         optimizeDeps: {
             noDiscovery: true
         },
@@ -19,7 +20,7 @@ export default defineConfig(({ mode }) => {
             Components({
                 resolvers: [PrimeVueResolver()]
             })
-        ],
+        ].filter(Boolean),
         build: {
             target: 'esnext'
         },
@@ -34,17 +35,6 @@ export default defineConfig(({ mode }) => {
                 '@env': fileURLToPath(new URL('./src/environments', import.meta.url))
             }
         },
-        // css: {
-        //   preprocessorOptions: {
-        //     scss: {
-        //       api: 'modern-compiler',
-        //       additionalData: `
-        //         @use "@shared/styles/variables.scss" as *;
-        //       `
-        //     }
-        //   }
-        // },
-        // envDir: 'src/environments',
         server: {
             port: 5000
         }

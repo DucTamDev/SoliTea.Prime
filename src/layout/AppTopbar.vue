@@ -16,7 +16,7 @@ const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout();
                 <img
                     src="@/assets/images/logos/logo.png"
                     alt="Soli logo"
-                    class="w-[50px] h-[50px] object-containt rounded-xl"
+                    class="object-containt h-[50px] w-[50px] rounded-xl"
                 />
 
                 <span>{{ AppConstants.AppName.toUpperCase() }}</span>

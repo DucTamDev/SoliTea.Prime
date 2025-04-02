@@ -1,6 +1,6 @@
 <!-- src/components/ProductSectionContainer.vue -->
 <template>
-    <div class="space-y-16 py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <div class="space-y-16 bg-gradient-to-b from-gray-50 to-white px-4 py-16">
         <!-- Best Sellers - Trà Thơm Chất Lượng -->
         <section class="container mx-auto">
             <ProductList title="Best Sellers - Trà Thơm Chất Lượng" :products="topTeaBestSellers" />
@@ -13,12 +13,12 @@
 
         <!-- Menu -->
         <section class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#006f3c] mb-10 relative">Menu</h2>
+            <h2 class="relative mb-10 text-center text-3xl font-bold text-[#006f3c] md:text-4xl">Menu</h2>
             <div class="flex justify-center px-4">
                 <img
                     src="@/assets/images/menu.jpg"
                     alt="Menu"
-                    class="max-w-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    class="max-w-full rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 />
             </div>
         </section>

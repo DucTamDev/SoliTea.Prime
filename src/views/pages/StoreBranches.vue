@@ -1,5 +1,5 @@
 <template>
-    <section class="container mx-auto branch-list">
+    <section class="branch-list container mx-auto">
         <h2 class="branch-title">Danh Sách Chi Nhánh</h2>
 
         <!-- Search Input -->

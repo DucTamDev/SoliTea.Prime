@@ -3,40 +3,40 @@
     <div class="contact-page min-h-screen bg-gray-100">
         <!-- Hero Section (Smaller) -->
         <section
-            class="relative h-[50vh] bg-cover bg-center flex items-center justify-center text-white"
+            class="relative flex h-[50vh] items-center justify-center bg-cover bg-center text-white"
             style="background-image: url('@/assets/images/soli-tea-bg.jpg')"
         >
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"></div>
-            <div class="relative z-10 text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-down drop-shadow-lg">
+            <div class="relative z-10 px-4 text-center">
+                <h1 class="animate-fade-in-down mb-4 text-4xl font-extrabold drop-shadow-lg md:text-5xl">
                     Liên Hệ Soli
                 </h1>
-                <p class="text-lg md:text-xl max-w-xl mx-auto mb-6 animate-fade-in-up drop-shadow-md">
+                <p class="animate-fade-in-up mx-auto mb-6 max-w-xl text-lg drop-shadow-md md:text-xl">
                     Kết nối với chúng tôi để hợp tác và phát triển cùng Soli!
                 </p>
             </div>
         </section>
 
         <!-- Contact CTA Section (Smaller) -->
-        <section class="max-w-3xl mx-auto px-4 py-12 -mt-16 relative z-20">
+        <section class="relative z-20 mx-auto -mt-16 max-w-3xl px-4 py-12">
             <div
-                class="bg-white rounded-3xl shadow-2xl p-6 md:p-8 text-center transform transition-all duration-500 hover:scale-105"
+                class="transform rounded-3xl bg-white p-6 text-center shadow-2xl transition-all duration-500 hover:scale-105 md:p-8"
             >
-                <h2 class="text-2xl md:text-3xl font-bold text-[#4d642d] mb-4">Nhắn Tin Cho Soli</h2>
-                <p class="text-base text-gray-600 mb-6">Liên hệ qua Facebook hoặc gọi điện ngay!</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <h2 class="mb-4 text-2xl font-bold text-[#4d642d] md:text-3xl">Nhắn Tin Cho Soli</h2>
+                <p class="mb-6 text-base text-gray-600">Liên hệ qua Facebook hoặc gọi điện ngay!</p>
+                <div class="flex flex-col justify-center gap-4 sm:flex-row">
                     <!-- Facebook Messenger Button -->
                     <a
                         href="https://www.facebook.com/tiemtrasoli.username"
                         target="_blank"
-                        class="flex items-center justify-center bg-[#4d642d] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#6b8e23] transition-all duration-300 shadow-lg text-sm md:text-base"
+                        class="flex items-center justify-center rounded-full bg-[#4d642d] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#6b8e23] md:text-base"
                     >
                         <i class="fab fa-facebook mr-2 text-lg"></i>
                         Nhắn Tin Facebook
                     </a>
                     <!-- Phone Button -->
                     <div
-                        class="flex items-center justify-center bg-[#6b8e23] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#4d642d] transition-all duration-300 shadow-lg text-sm md:text-base"
+                        class="flex items-center justify-center rounded-full bg-[#6b8e23] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#4d642d] md:text-base"
                     >
                         <i class="fas fa-phone-alt mr-2 text-lg"></i>
                         Gọi +84 123 456 789

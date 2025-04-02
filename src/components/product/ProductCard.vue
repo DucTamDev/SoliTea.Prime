@@ -1,13 +1,13 @@
 <!-- src/components/ProductCard.vue -->
 <template>
     <div
-        class="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-in flex-shrink-0 w-full max-w-[18rem]"
+        class="animate-slide-in w-full max-w-[18rem] flex-shrink-0 transform overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
     >
-        <img :src="product.image" :alt="product.name" class="w-full h-40 sm:h-48 object-cover" />
+        <img :src="product.image" :alt="product.name" class="h-40 w-full object-cover sm:h-48" />
         <div class="p-3 sm:p-4">
-            <h3 class="text-lg sm:text-xl font-semibold text-teal-700 mb-1 line-clamp-1">{{ product.name }}</h3>
-            <p class="text-gray-600 text-sm line-clamp-2">{{ product.description }}</p>
-            <p class="mt-2 text-base sm:text-lg font-bold text-teal-600">{{ product.price.toLocaleString() }} VND</p>
+            <h3 class="mb-1 line-clamp-1 text-lg font-semibold text-teal-700 sm:text-xl">{{ product.name }}</h3>
+            <p class="line-clamp-2 text-sm text-gray-600">{{ product.description }}</p>
+            <p class="mt-2 text-base font-bold text-teal-600 sm:text-lg">{{ product.price.toLocaleString() }} VND</p>
         </div>
     </div>
 </template>
