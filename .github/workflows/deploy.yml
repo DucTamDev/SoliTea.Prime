@@ -70,6 +70,9 @@ jobs:
           # Clean up temporary directory
           rm -rf /tmp/dist-tmp
           
+          # Configure remote URL with GITHUB_TOKEN for authentication
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          
           # Commit and push to gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages from deploy-github branch"
