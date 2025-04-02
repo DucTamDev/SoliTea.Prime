@@ -12,8 +12,8 @@ const router = createRouter({
             component: MainLayout,
             children: [
                 {
-                    path: 'trang-chu',
-                    alias: 'home',
+                    path: '',
+                    alias: ['trang-chu', 'home'],
                     name: 'home',
                     component: () => import('@/views/pages/Home.vue'),
                     meta: { title: 'Trang chủ' }
@@ -38,6 +38,13 @@ const router = createRouter({
                     name: 'Franchise',
                     component: () => import('@/views/pages/Franchise.vue'),
                     meta: { title: 'Nhượng quyền' }
+                },
+                {
+                    path: 'chi-nhanh',
+                    alias: 'store-branch',
+                    name: 'StoreBranches',
+                    component: () => import('@/views/pages/StoreBranches.vue'),
+                    meta: { title: 'Chi Nhánh' }
                 },
                 {
                     path: 'lien-he',

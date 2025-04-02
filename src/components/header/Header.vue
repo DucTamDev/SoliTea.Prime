@@ -1,3 +1,5 @@
+<!-- Header -->
+
 <template>
     <header class="header-container">
         <HeaderTopBar />
@@ -12,28 +14,27 @@ import HeaderTopBar from './HeaderTopBar.vue';
 const menus = [
     {
         title: 'Trang chủ',
-        href: '/trang-chu',
-        subItems: []
+        href: '/trang-chu'
     },
     {
         title: 'Sản phẩm',
-        href: '/san-pham',
-        subItems: []
+        href: '/san-pham'
     },
     {
         title: 'Thương hiệu Soli',
-        href: '/gioi-thieu',
-        subItems: []
+        href: '/gioi-thieu'
     },
     {
         title: 'Nhượng quyền',
-        href: '/nhuong-quyen',
-        subItems: []
+        href: '/nhuong-quyen'
+    },
+    {
+        title: 'Chi nhánh',
+        href: '/chi-nhanh'
     },
     {
         title: 'Liên hệ',
-        href: '/lien-he',
-        subItems: []
+        href: '/lien-he'
     }
 ];
 </script>

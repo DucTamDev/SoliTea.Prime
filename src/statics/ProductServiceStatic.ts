@@ -1308,6 +1308,38 @@ export const ProductServiceStatic = {
                 image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
                 price: 52000,
                 rating: 5
+            },
+            {
+                id: '1005',
+                name: 'Trà Hoa Hồng',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
+                price: 52000,
+                rating: 5
+            },
+            {
+                id: '1006',
+                name: 'Trà Hoa Hồng',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
+                price: 52000,
+                rating: 5
+            },
+            {
+                id: '1007',
+                name: 'Trà Hoa Hồng',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
+                price: 52000,
+                rating: 5
+            },
+            {
+                id: '1008',
+                name: 'Trà Hoa Hồng',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
+                price: 52000,
+                rating: 5
             }
         ];
     },

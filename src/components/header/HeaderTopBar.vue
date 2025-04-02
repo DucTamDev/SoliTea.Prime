@@ -1,223 +1,252 @@
+<!-- src/components/HeaderTopBar.vue -->
 <template>
-    <div class="header-topbar">
-        <div class="header-topbar-logo-container">
-            <router-link to="/" class="header-topbar-logo">
-                <img
-                    v-if="dataProps.showLogoOption.image"
-                    src="@/assets/images/logos/logo.png"
-                    alt="Soli logo"
-                    class="w-12 h-12 object-contain rounded-xl"
-                />
-                <span v-if="dataProps.showLogoOption.name">
-                    {{ AppConstants.AppName.toUpperCase() }}
-                </span>
-            </router-link>
-        </div>
+    <header class="header-topbar">
+        <div class="container mx-auto px-4">
+            <div class="header-content">
+                <!-- Logo Section -->
+                <router-link to="/" class="header-logo">
+                    <img
+                        v-if="mergedProps.showLogoOption.image"
+                        src="@/assets/images/logos/logo.png"
+                        alt="Soli logo"
+                        class="header-logo-image"
+                    />
+                    <span v-if="mergedProps.showLogoOption.name" class="header-logo-text">
+                        {{ AppConstants.AppName.toUpperCase() }}
+                    </span>
+                </router-link>
 
-        <div class="header-topbar-hot-info">
-            <div>
-                <span> 🚀 Chỉ với vốn đầu tư hợp lý 💰</span>
-            </div>
-            <div>
-                <span>Bạn đã có thể sở hữu thương hiệu trà sữa <span class="highlight">SOLI!</span> ☕</span>
-            </div>
-        </div>
+                <!-- Hot Info Section -->
+                <div class="header-hot-info">
+                    <p>🚀 Chỉ với vốn đầu tư hợp lý 💰</p>
+                    <p>
+                        Bạn đã có thể sở hữu thương hiệu trà sữa
+                        <span class="highlight">SOLI!</span> ☕
+                    </p>
+                </div>
 
-        <div class="header-topbar-actions">
-            <div class="header-topbar-menu hidden lg:block">
-                <div class="header-topbar-menu-content">
+                <!-- Actions Section -->
+                <nav class="header-actions">
                     <button
-                        type="button"
-                        class="header-topbar-action"
-                        v-for="(value, key) in dataProps.showMenuOptions"
+                        v-for="(visible, key) in mergedProps.showMenuOptions"
                         :key="key"
-                        v-show="value"
+                        v-show="visible"
+                        class="header-action-btn"
+                        :aria-label="capitalizeFirstLetter(key)"
                     >
                         <i :class="['pi', `pi-${key}`]"></i>
-                        <span>{{ capitalizeFirstLetter(key) }}</span>
                     </button>
-                </div>
+                </nav>
             </div>
         </div>
-    </div>
+    </header>
 </template>
 
 <script setup lang="ts">
 import { AppConstants } from '@/core/constants/app.constants';
+import { computed } from 'vue';
+
+interface LogoOptions {
+    name?: boolean;
+    image?: boolean;
+}
+
+interface MenuOptions {
+    calendar?: boolean;
+    inbox?: boolean;
+    user?: boolean;
+}
 
 const props = defineProps<{
-    showLogoOption?: {
-        name?: boolean;
-        image?: boolean;
-    };
+    showLogoOption?: LogoOptions;
     showMenuOptions?: Record<string, boolean>;
 }>();
 
 const defaultOptions = {
-    showLogoOption: {
-        name: false,
-        image: true
-    },
-    showMenuOptions: {
-        calendar: false,
-        inbox: false,
-        user: false
-    }
+    showLogoOption: { name: false, image: true } as LogoOptions,
+    showMenuOptions: { calendar: false, inbox: false, user: false } as MenuOptions
 };
 
-const dataProps = {
+const mergedProps = computed(() => ({
     showLogoOption: { ...defaultOptions.showLogoOption, ...props.showLogoOption },
     showMenuOptions: { ...defaultOptions.showMenuOptions, ...props.showMenuOptions }
-};
+}));
 
-const capitalizeFirstLetter = (string: string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-};
+const capitalizeFirstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/layout/mixins' as *;
-
 .header-topbar {
-    height: 4rem;
-    z-index: 997;
-    left: 0;
+    position: sticky;
     top: 0;
-    width: 100%;
-    padding: 0 2rem;
+    z-index: 997;
     background-color: var(--surface-card);
-    transition: left var(--header-section-transition-duration);
+    transition: all var(--header-section-transition-duration);
+}
+
+.container {
+    padding: 0.5rem 1rem;
+}
+
+.header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+}
 
-    .header-topbar-logo-container {
-        width: 20rem;
-        display: flex;
-        align-items: center;
-    }
+/* Logo Styles */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    flex-shrink: 0;
 
-    .header-topbar-logo {
-        display: inline-flex;
-        align-items: center;
-        font-size: 1.5rem;
+    &:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
         border-radius: var(--content-border-radius);
-        color: var(--text-color);
-        font-weight: 500;
-        gap: 0.5rem;
-
-        &:focus-visible {
-            @include focused();
-        }
-
-        img {
-            background-color: #fff;
-        }
     }
+}
 
-    .header-topbar-hot-info {
-        display: block;
-        font-size: 14px;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-        max-width: 400px;
-        margin: 0 auto;
-        line-height: 1.5;
-        letter-spacing: 1px;
+.header-logo-image {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    transition:
+        width 0.3s,
+        height 0.3s;
+}
+
+.header-logo-text {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Hot Info Styles */
+.header-hot-info {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 0 0.5rem;
+
+    p {
+        margin: 0;
     }
 
     .highlight {
         color: #ff5733;
     }
+}
 
-    .header-topbar-action {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        color: var(--text-color);
-        transition: background-color var(--element-transition-duration);
-        cursor: pointer;
+/* Actions Styles */
+.header-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
 
-        .toggle-nav {
-            display: none;
-        }
+.header-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--element-transition-duration);
 
-        &:hover {
-            background-color: var(--surface-hover);
-        }
-
-        &:focus-visible {
-            @include focused();
-        }
-
-        i {
-            font-size: 1.25rem;
-        }
-
-        span {
-            font-size: 1rem;
-            display: none;
-        }
-
-        &.header-topbar-action-highlight {
-            background-color: var(--primary-color);
-            color: var(--primary-contrast-color);
-        }
+    &:hover {
+        background-color: var(--surface-hover);
     }
 
-    .header-menu-button {
-        margin-right: 0.5rem;
+    &:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
     }
 
-    .header-topbar-actions {
-        margin-left: auto;
-        display: flex;
-        gap: 1rem;
-    }
-
-    .header-topbar-menu {
-        display: flex;
-
-        .header-topbar-action {
-            &.toggle-nav {
-                display: none;
-            }
-        }
-    }
-
-    .header-topbar-menu-content {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .header-config-menu {
-        display: flex;
-        gap: 1rem;
+    i {
+        font-size: 1.25rem;
     }
 }
 
-@media (max-width: 991px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
     .header-topbar {
-        padding: 0 2rem;
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+    }
 
-        .header-topbar-logo-container {
-            width: auto;
-        }
+    .header-content {
+        gap: 0.75rem;
+    }
 
-        .header-menu-button {
-            margin-left: 0;
-            margin-right: 0.5rem;
-        }
+    .header-hot-info {
+        font-size: 0.8125rem; /* 13px */
+    }
 
-        .header-topbar-menu-button {
-            display: inline-flex;
+    .header-logo-image {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .header-action-btn {
+        width: 2rem;
+        height: 2rem;
+
+        i {
+            font-size: 1rem;
         }
-        .header-topbar-hot-info {
-            font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    .header-hot-info {
+        font-size: 0.75rem; /* 12px */
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    .header-actions {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo-image {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .header-logo-text {
+        font-size: 1.25rem;
+    }
+
+    .header-action-btn {
+        width: 1.75rem;
+        height: 1.75rem;
+
+        i {
+            font-size: 0.875rem;
         }
     }
 }

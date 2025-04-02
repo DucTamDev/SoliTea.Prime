@@ -1,66 +1,45 @@
+<!-- src/components/ProductCard.vue -->
 <template>
-    <div class="product-card">
-        <img :src="product.image" :alt="product.name" class="product-image" />
-        <div class="product-info">
-            <div class="product-name">{{ product.name }}</div>
-            <p class="product-price">{{ formatPriceVND(product.price) }}</p>
+    <div
+        class="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-in flex-shrink-0 w-full max-w-[18rem]"
+    >
+        <img :src="product.image" :alt="product.name" class="w-full h-40 sm:h-48 object-cover" />
+        <div class="p-3 sm:p-4">
+            <h3 class="text-lg sm:text-xl font-semibold text-teal-700 mb-1 line-clamp-1">{{ product.name }}</h3>
+            <p class="text-gray-600 text-sm line-clamp-2">{{ product.description }}</p>
+            <p class="mt-2 text-base sm:text-lg font-bold text-teal-600">{{ product.price.toLocaleString() }} VND</p>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { Product } from '@/core/types/Product';
-import { formatPriceVND } from '@/core/utils/format';
 import { defineProps } from 'vue';
 
-defineProps<{ product: Product }>();
+interface Product {
+    name: string;
+    description: string;
+    price: number;
+    image: string;
+}
+
+defineProps<{
+    product: Product;
+}>();
 </script>
 
-<style scoped lang="scss">
-.product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    padding: 8px;
-    background-color: #fff;
+<style scoped>
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.product-info {
-    margin-top: 12px;
-    width: 100%;
-}
-
-.product-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(0, 111, 60);
-    text-align: start;
-}
-
-.product-price {
-    color: rgb(0, 111, 60);
-    font-weight: bold;
-    margin: 8px 0;
-    text-align: start;
-}
-
-.buy-button {
-    background-color: rgb(0, 111, 60);
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.buy-button:hover {
-    background-color: #218838;
+.animate-slide-in {
+    animation: slideIn 0.5s ease-out;
 }
 </style>
