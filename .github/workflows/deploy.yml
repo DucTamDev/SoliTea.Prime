@@ -16,7 +16,10 @@ jobs:
     steps:
       # Step 1: Checkout the repository manually using HTTPS
       - name: Checkout repository
-        run: git clone https://github.com/${{ github.repository }} .
+        run: |
+          git clone https://github.com/${{ github.repository }} .
+          pwd  # Log current directory for debugging
+          ls -la  # List contents for debugging
 
       # Step 2: Set up Node.js manually with sudo
       - name: Set up Node.js
@@ -24,6 +27,7 @@ jobs:
           curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
           sudo apt-get install -y nodejs
           node --version  # Verify Node.js version (22.9.0)
+          npm --version  # Verify npm is installed
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -31,7 +35,9 @@ jobs:
 
       # Step 4: Build the Vue app
       - name: Build the app
-        run: npm run build
+        run: |
+          npm run build
+          ls -la dist/ || echo "dist/ directory not found"  # Check if dist/ exists
 
       # Step 5: Deploy to gh-pages branch
       - name: Deploy to gh-pages branch
@@ -48,9 +54,14 @@ jobs:
             git checkout --orphan gh-pages
           fi
           
+          # Debug current directory and dist/ contents
+          pwd
+          ls -la
+          ls -la dist/ || echo "dist/ not found after checkout"
+          
           # Remove old files and copy new build output
           rm -rf ./*
-          cp -r dist/* .
+          cp -r dist/* . || { echo "Failed to copy dist/*"; exit 1; }
           
           # Commit and push to gh-pages
           git add .
