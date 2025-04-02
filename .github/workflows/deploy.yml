@@ -1,51 +1,59 @@
 name: Soli App Deployment to GitHub Pages
 
+# Trigger the workflow on push to deploy-github branch or manual dispatch
 on:
   push:
     branches:
-      - deploy-github  # Trigger on push to the deploy-github branch
-  workflow_dispatch:  # Allow manual trigger from the Actions tab
+      - deploy-github
+  workflow_dispatch:
+
+# Set permissions for the GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Environment variables
+env:
+  NODE_VERSION: 22.9.0
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-    # Step 1: Checkout the repository manually using HTTPS
-    - name: Checkout repository
-      run: git clone https://github.com/${{ github.repository }} .
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    # Step 2: Set up Node.js manually
-    - name: Set up Node.js
-      run: |
-        curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
-        apt-get install -y nodejs
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
 
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: npm install
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm ci
 
-    # Step 4: Build the Vue app
-    - name: Build the app
-      run: npm run build
+      # Build the Vue app
+      - name: Build
+        run: npm run build
+        env:
+          VUE_APP_BASE_URL: ${{ github.event.repository.name }}
 
-    # Step 5: Archive build output
-    - name: Archive build artifact
-      run: |
-        tar -czf artifact.tar.gz -C dist .
+      # Setup Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
+      # Upload artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
 
-    steps:
-    # Step 6: Download and extract artifact
-    - name: Download and extract artifact
-      run: |
-        tar -xzf artifact.tar.gz -C /var/www/html/
-
-    # Step 7: Configure GitHub Pages
-    - name: Configure GitHub Pages
-      run: |
-        mkdir -p /var/www/html/.github/pages
-        echo "Deployment successful" > /var/www/html/.github/pages/index.html
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
