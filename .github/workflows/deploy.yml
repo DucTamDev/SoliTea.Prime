@@ -6,14 +6,12 @@ on:
       - deploy-github  # Trigger on push to the deploy-github branch
   workflow_dispatch:  # Allow manual trigger from the Actions tab
 
-# Set permissions for GitHub Pages deployment
+# Permissions for writing to the repository
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the repository manually using HTTPS
@@ -35,39 +33,28 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      # Step 5: Upload build output as an artifact
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifact
-          path: dist/
-          retention-days: 1
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      # Step 6: Download the build artifact
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifact
-          path: dist/
-
-      # Step 7: Setup GitHub Pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      # Step 8: Upload artifact for GitHub Pages deployment
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist/
-
-      # Step 9: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # Step 5: Deploy to gh-pages branch
+      - name: Deploy to gh-pages branch
+        run: |
+          # Configure git
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          
+          # Check if gh-pages branch exists, create it if not
+          git fetch
+          if git show-ref --quiet refs/heads/gh-pages; then
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+          fi
+          
+          # Remove old files and copy new build output
+          rm -rf ./*
+          cp -r dist/* .
+          
+          # Commit and push to gh-pages
+          git add .
+          git commit -m "Deploy to GitHub Pages from deploy-github branch"
+          git push origin gh-pages --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
