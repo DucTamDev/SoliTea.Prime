@@ -1,3 +1,4 @@
+import { AppConstants } from '@/core/constants/app.constants';
 import AdminLayout from '@/layout/AdminLayout.vue';
 import BlankLayout from '@/layout/BlankLayout.vue';
 import MainLayout from '@/layout/MainLayout.vue';
@@ -224,7 +225,7 @@ router.beforeEach(async (to, from, next) => {
 
     // document.title = translatedTitle ? `${AppConstants.AppName} - ${translatedTitle}` : AppConstants.AppName;
 
-    document.title = titleKey;
+    document.title = titleKey ? `${AppConstants.AppName} - ${titleKey}` : AppConstants.AppName;
     next();
 });
 

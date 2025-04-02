@@ -171,7 +171,7 @@ function getStatusLabel(status) {
                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
             >
                 <template #header>
-                    <div class="flex flex-wrap gap-2 items-center justify-between">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
                         <h4 class="m-0">Manage Products</h4>
                         <IconField>
                             <InputIcon>
@@ -241,10 +241,10 @@ function getStatusLabel(status) {
                     v-if="product.image"
                     :src="`https://primefaces.org/cdn/primevue/images/product/${product.image}`"
                     :alt="product.image"
-                    class="block m-auto pb-4"
+                    class="m-auto block pb-4"
                 />
                 <div>
-                    <label for="name" class="block font-bold mb-3">Name</label>
+                    <label for="name" class="mb-3 block font-bold">Name</label>
                     <InputText
                         id="name"
                         v-model.trim="product.name"
@@ -256,11 +256,11 @@ function getStatusLabel(status) {
                     <small v-if="submitted && !product.name" class="text-red-500">Name is required.</small>
                 </div>
                 <div>
-                    <label for="description" class="block font-bold mb-3">Description</label>
+                    <label for="description" class="mb-3 block font-bold">Description</label>
                     <Textarea id="description" v-model="product.description" required="true" rows="3" cols="20" fluid />
                 </div>
                 <div>
-                    <label for="inventoryStatus" class="block font-bold mb-3">Inventory Status</label>
+                    <label for="inventoryStatus" class="mb-3 block font-bold">Inventory Status</label>
                     <Select
                         id="inventoryStatus"
                         v-model="product.inventoryStatus"
@@ -272,9 +272,9 @@ function getStatusLabel(status) {
                 </div>
 
                 <div>
-                    <span class="block font-bold mb-4">Category</span>
+                    <span class="mb-4 block font-bold">Category</span>
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="flex items-center gap-2 col-span-6">
+                        <div class="col-span-6 flex items-center gap-2">
                             <RadioButton
                                 id="category1"
                                 v-model="product.category"
@@ -283,11 +283,11 @@ function getStatusLabel(status) {
                             />
                             <label for="category1">Accessories</label>
                         </div>
-                        <div class="flex items-center gap-2 col-span-6">
+                        <div class="col-span-6 flex items-center gap-2">
                             <RadioButton id="category2" v-model="product.category" name="category" value="Clothing" />
                             <label for="category2">Clothing</label>
                         </div>
-                        <div class="flex items-center gap-2 col-span-6">
+                        <div class="col-span-6 flex items-center gap-2">
                             <RadioButton
                                 id="category3"
                                 v-model="product.category"
@@ -296,7 +296,7 @@ function getStatusLabel(status) {
                             />
                             <label for="category3">Electronics</label>
                         </div>
-                        <div class="flex items-center gap-2 col-span-6">
+                        <div class="col-span-6 flex items-center gap-2">
                             <RadioButton id="category4" v-model="product.category" name="category" value="Fitness" />
                             <label for="category4">Fitness</label>
                         </div>
@@ -305,7 +305,7 @@ function getStatusLabel(status) {
 
                 <div class="grid grid-cols-12 gap-4">
                     <div class="col-span-6">
-                        <label for="price" class="block font-bold mb-3">Price</label>
+                        <label for="price" class="mb-3 block font-bold">Price</label>
                         <InputNumber
                             id="price"
                             v-model="product.price"
@@ -316,7 +316,7 @@ function getStatusLabel(status) {
                         />
                     </div>
                     <div class="col-span-6">
-                        <label for="quantity" class="block font-bold mb-3">Quantity</label>
+                        <label for="quantity" class="mb-3 block font-bold">Quantity</label>
                         <InputNumber id="quantity" v-model="product.quantity" integeronly fluid />
                     </div>
                 </div>

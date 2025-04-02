@@ -72,17 +72,17 @@ function searchCountry(event: any) {
 </script>
 
 <template>
-    <Fluid class="flex flex-col md:flex-row gap-8">
+    <Fluid class="flex flex-col gap-8 md:flex-row">
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">InputText</div>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="text-xl font-semibold">InputText</div>
+                <div class="flex flex-col gap-4 md:flex-row">
                     <InputText type="text" placeholder="Default" />
                     <InputText type="text" placeholder="Disabled" :disabled="true" />
                     <InputText type="text" placeholder="Invalid" invalid />
                 </div>
 
-                <div class="font-semibold text-xl">Icons</div>
+                <div class="text-xl font-semibold">Icons</div>
                 <IconField>
                     <InputIcon class="pi pi-user" />
                     <InputText type="text" placeholder="Username" />
@@ -92,16 +92,16 @@ function searchCountry(event: any) {
                     <InputIcon class="pi pi-search" />
                 </IconField>
 
-                <div class="font-semibold text-xl">Float Label</div>
+                <div class="text-xl font-semibold">Float Label</div>
                 <FloatLabel>
                     <InputText id="username" type="text" v-model="floatValue" />
                     <label for="username">Username</label>
                 </FloatLabel>
 
-                <div class="font-semibold text-xl">Textarea</div>
+                <div class="text-xl font-semibold">Textarea</div>
                 <Textarea placeholder="Your Message" :autoResize="true" rows="3" cols="30" />
 
-                <div class="font-semibold text-xl">AutoComplete</div>
+                <div class="text-xl font-semibold">AutoComplete</div>
                 <AutoComplete
                     v-model="selectedAutoValue"
                     :suggestions="autoFilteredValue"
@@ -113,53 +113,53 @@ function searchCountry(event: any) {
                     @complete="searchCountry($event)"
                 />
 
-                <div class="font-semibold text-xl">DatePicker</div>
+                <div class="text-xl font-semibold">DatePicker</div>
                 <DatePicker :showIcon="true" :showButtonBar="true" v-model="calendarValue"></DatePicker>
 
-                <div class="font-semibold text-xl">InputNumber</div>
+                <div class="text-xl font-semibold">InputNumber</div>
                 <InputNumber v-model="inputNumberValue" showButtons mode="decimal"></InputNumber>
             </div>
 
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Slider</div>
+                <div class="text-xl font-semibold">Slider</div>
                 <InputText v-model.number="sliderValue" />
                 <Slider v-model="sliderValue" />
 
-                <div class="flex flex-row mt-6">
-                    <div class="flex flex-col gap-4 w-1/2">
-                        <div class="font-semibold text-xl">Rating</div>
+                <div class="mt-6 flex flex-row">
+                    <div class="flex w-1/2 flex-col gap-4">
+                        <div class="text-xl font-semibold">Rating</div>
                         <Rating v-model="ratingValue" />
                     </div>
-                    <div class="flex flex-col gap-4 w-1/2">
-                        <div class="font-semibold text-xl">ColorPicker</div>
+                    <div class="flex w-1/2 flex-col gap-4">
+                        <div class="text-xl font-semibold">ColorPicker</div>
                         <ColorPicker style="width: 2rem" v-model="colorValue" />
                     </div>
                 </div>
 
-                <div class="font-semibold text-xl">Knob</div>
+                <div class="text-xl font-semibold">Knob</div>
                 <Knob v-model="knobValue" :step="10" :min="-50" :max="50" valueTemplate="{value}%" />
             </div>
         </div>
         <div class="md:w-1/2">
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">RadioButton</div>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="text-xl font-semibold">RadioButton</div>
+                <div class="flex flex-col gap-4 md:flex-row">
                     <div class="flex items-center">
                         <RadioButton id="option1" name="option" value="Chicago" v-model="radioValue" />
-                        <label for="option1" class="leading-none ml-2">Chicago</label>
+                        <label for="option1" class="ml-2 leading-none">Chicago</label>
                     </div>
                     <div class="flex items-center">
                         <RadioButton id="option2" name="option" value="Los Angeles" v-model="radioValue" />
-                        <label for="option2" class="leading-none ml-2">Los Angeles</label>
+                        <label for="option2" class="ml-2 leading-none">Los Angeles</label>
                     </div>
                     <div class="flex items-center">
                         <RadioButton id="option3" name="option" value="New York" v-model="radioValue" />
-                        <label for="option3" class="leading-none ml-2">New York</label>
+                        <label for="option3" class="ml-2 leading-none">New York</label>
                     </div>
                 </div>
 
-                <div class="font-semibold text-xl">Checkbox</div>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="text-xl font-semibold">Checkbox</div>
+                <div class="flex flex-col gap-4 md:flex-row">
                     <div class="flex items-center">
                         <Checkbox id="checkOption1" name="option" value="Chicago" v-model="checkboxValue" />
                         <label for="checkOption1" class="ml-2">Chicago</label>
@@ -174,18 +174,18 @@ function searchCountry(event: any) {
                     </div>
                 </div>
 
-                <div class="font-semibold text-xl">ToggleSwitch</div>
+                <div class="text-xl font-semibold">ToggleSwitch</div>
                 <ToggleSwitch v-model="switchValue" />
             </div>
 
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">Listbox</div>
+                <div class="text-xl font-semibold">Listbox</div>
                 <Listbox v-model="listboxValue" :options="listboxValues" optionLabel="name" :filter="true" />
 
-                <div class="font-semibold text-xl">Select</div>
+                <div class="text-xl font-semibold">Select</div>
                 <Select v-model="dropdownValue" :options="dropdownValues" optionLabel="name" placeholder="Select" />
 
-                <div class="font-semibold text-xl">MultiSelect</div>
+                <div class="text-xl font-semibold">MultiSelect</div>
                 <MultiSelect
                     v-model="multiselectValue"
                     :options="multiselectValues"
@@ -195,12 +195,12 @@ function searchCountry(event: any) {
                 >
                     <template #value="slotProps">
                         <div
-                            class="inline-flex items-center py-1 px-2 bg-primary text-primary-contrast rounded-border mr-2"
+                            class="mr-2 inline-flex items-center bg-primary px-2 py-1 text-primary-contrast rounded-border"
                             v-for="option of slotProps.value"
                             :key="option.code"
                         >
                             <span
-                                :class="'mr-2 flag flag-' + option.code.toLowerCase()"
+                                :class="'flag flag- mr-2' + option.code.toLowerCase()"
                                 style="width: 18px; height: 12px"
                             />
                             <div>{{ option.name }}</div>
@@ -212,7 +212,7 @@ function searchCountry(event: any) {
                     <template #option="slotProps">
                         <div class="flex items-center">
                             <span
-                                :class="'mr-2 flag flag-' + slotProps.option.code.toLowerCase()"
+                                :class="'flag flag- mr-2' + slotProps.option.code.toLowerCase()"
                                 style="width: 18px; height: 12px"
                             />
                             <div>{{ slotProps.option.name }}</div>
@@ -220,24 +220,24 @@ function searchCountry(event: any) {
                     </template>
                 </MultiSelect>
 
-                <div class="font-semibold text-xl">TreeSelect</div>
+                <div class="text-xl font-semibold">TreeSelect</div>
                 <TreeSelect v-model="selectedNode" :options="treeSelectNodes" placeholder="Select Item"></TreeSelect>
             </div>
 
             <div class="card flex flex-col gap-4">
-                <div class="font-semibold text-xl">ToggleButton</div>
+                <div class="text-xl font-semibold">ToggleButton</div>
                 <ToggleButton v-model="toggleValue" onLabel="Yes" offLabel="No" :style="{ width: '10em' }" />
 
-                <div class="font-semibold text-xl">SelectButton</div>
+                <div class="text-xl font-semibold">SelectButton</div>
                 <SelectButton v-model="selectButtonValue" :options="selectButtonValues" optionLabel="name" />
             </div>
         </div>
     </Fluid>
 
-    <Fluid class="flex mt-8">
-        <div class="card flex flex-col gap-4 w-full">
-            <div class="font-semibold text-xl">InputGroup</div>
-            <div class="flex flex-col md:flex-row gap-4">
+    <Fluid class="mt-8 flex">
+        <div class="card flex w-full flex-col gap-4">
+            <div class="text-xl font-semibold">InputGroup</div>
+            <div class="flex flex-col gap-4 md:flex-row">
                 <InputGroup>
                     <InputGroupAddon>
                         <i class="pi pi-user"></i>
@@ -256,7 +256,7 @@ function searchCountry(event: any) {
                     <InputGroupAddon>.00</InputGroupAddon>
                 </InputGroup>
             </div>
-            <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex flex-col gap-4 md:flex-row">
                 <InputGroup>
                     <Button label="Search" />
                     <InputText placeholder="Keyword" />

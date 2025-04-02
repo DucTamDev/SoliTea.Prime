@@ -15,12 +15,12 @@ onMounted(() => {
 
 <template>
     <div class="card">
-        <div class="font-semibold text-xl">Tree</div>
+        <div class="text-xl font-semibold">Tree</div>
         <Tree :value="treeValue" selectionMode="checkbox" v-model:selectionKeys="selectedTreeValue"></Tree>
     </div>
 
     <div class="card">
-        <div class="font-semibold text-xl mb-4">TreeTable</div>
+        <div class="mb-4 text-xl font-semibold">TreeTable</div>
         <TreeTable :value="treeTableValue" selectionMode="checkbox" v-model:selectionKeys="selectedTreeTableValue">
             <Column field="name" header="Name" :expander="true"></Column>
             <Column field="size" header="Size"></Column>

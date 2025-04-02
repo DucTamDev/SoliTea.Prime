@@ -1,21 +1,21 @@
 <!-- src/components/FranchiseProcess.vue -->
 <template>
-    <div class="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto relative">
+    <div class="bg-gradient-to-b from-gray-50 to-white px-4 py-16">
+        <div class="relative mx-auto max-w-4xl">
             <div
                 v-for="(step, index) in steps"
                 :key="step.id"
-                class="flex items-start mb-10 bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 sm:flex-row flex-col sm:items-center sm:text-left text-center relative"
+                class="relative mb-10 flex flex-col items-start rounded-xl bg-white p-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:flex-row sm:items-center sm:text-left"
                 :class="{ 'last-step': index === steps.length - 1 }"
             >
                 <div
-                    class="text-white text-xl font-bold bg-[#4d642d] rounded-full w-12 h-12 flex items-center justify-center mr-4 sm:mb-0 mb-4 flex-shrink-0"
+                    class="mb-4 mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#4d642d] text-xl font-bold text-white sm:mb-0"
                 >
                     {{ step.id }}
                 </div>
                 <div class="flex-1">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ step.title }}</h3>
-                    <p class="text-gray-600 text-base leading-relaxed">{{ step.description }}</p>
+                    <h3 class="mb-2 text-xl font-semibold text-gray-800">{{ step.title }}</h3>
+                    <p class="text-base leading-relaxed text-gray-600">{{ step.description }}</p>
                 </div>
             </div>
         </div>

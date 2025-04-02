@@ -1218,13 +1218,14 @@ export const ProductServiceStatic = {
         return Promise.resolve(this.getProductsWithOrdersData());
     },
 
+    traDaoCamDau: new URL('@/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg', import.meta.url).href,
     milkTeaBestSellersData() {
         return [
             {
                 id: '1000',
                 name: 'Matcha Latte Kem Cheese',
                 description: 'Thức uống trà xanh với kem cheese béo ngậy.',
-                image: 'src/assets/images/products/best-sellers-milk-tea/matcha-latte-kem-cheese.jpg',
+                image: this.traDaoCamDau,
                 price: 50000,
                 rating: 5
             },
@@ -1232,7 +1233,7 @@ export const ProductServiceStatic = {
                 id: '1001',
                 name: 'Trà Sữa Trân Châu Đường Đen',
                 description: 'Trà sữa hảo hạng kết hợp với trân châu đường đen thơm ngon.',
-                image: 'src/assets/images/products/best-sellers-milk-tea/matcha-sua-yen-mach.jpg',
+                image: this.traDaoCamDau,
                 price: 45000,
                 rating: 4
             },
@@ -1240,7 +1241,7 @@ export const ProductServiceStatic = {
                 id: '1002',
                 name: 'Hồng Trà Sữa',
                 description: 'Hồng trà kết hợp cùng sữa tươi, vị thanh mát.',
-                image: 'src/assets/images/products/best-sellers-milk-tea/matcha-sua-yen-mach.jpg',
+                image: this.traDaoCamDau,
                 price: 40000,
                 rating: 4
             },
@@ -1248,7 +1249,7 @@ export const ProductServiceStatic = {
                 id: '1003',
                 name: 'Trà Xanh Latte',
                 description: 'Sự hòa quyện giữa trà xanh Nhật Bản và sữa tươi.',
-                image: 'src/assets/images/products/best-sellers-milk-tea/matcha-sua-yen-mach.jpg',
+                image: this.traDaoCamDau,
                 price: 50000,
                 rating: 5
             },
@@ -1256,8 +1257,53 @@ export const ProductServiceStatic = {
                 id: '1004',
                 name: 'Oolong Sữa Tươi',
                 description: 'Trà Oolong kết hợp với sữa tươi thanh mát.',
-                image: 'src/assets/images/products/best-sellers-milk-tea/matcha-sua-yen-mach.jpg',
+                image: this.traDaoCamDau,
                 price: 42000,
+                rating: 5
+            }
+        ];
+    },
+
+    teaBestSellersData() {
+        return [
+            {
+                id: '2000',
+                name: 'Trà Đào Cam Dâu',
+                description: 'Sự kết hợp hoàn hảo giữa trà đào, cam và dâu tươi.',
+                image: this.traDaoCamDau,
+                price: 55000,
+                rating: 5
+            },
+            {
+                id: '2001',
+                name: 'Trà Oolong Nướng',
+                description: 'Trà Oolong với hương vị nướng thơm đặc trưng.',
+                image: this.traDaoCamDau,
+                price: 60000,
+                rating: 4
+            },
+            {
+                id: '2002',
+                name: 'Trà Sen Vàng',
+                description: 'Trà sen thơm dịu cùng hạt sen vàng giòn ngon.',
+                image: this.traDaoCamDau,
+                price: 50000,
+                rating: 5
+            },
+            {
+                id: '2003',
+                name: 'Trà Xanh Tắc Mật Ong',
+                description: 'Trà xanh thanh mát hòa quyện cùng tắc và mật ong.',
+                image: this.traDaoCamDau,
+                price: 48000,
+                rating: 4
+            },
+            {
+                id: '2004',
+                name: 'Trà Hoa Hồng',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: this.traDaoCamDau,
+                price: 52000,
                 rating: 5
             }
         ];
@@ -1265,83 +1311,6 @@ export const ProductServiceStatic = {
 
     getMilkTeaBestSellers() {
         return Promise.resolve(this.milkTeaBestSellersData());
-    },
-
-    teaBestSellersData() {
-        return [
-            {
-                id: '1000',
-                name: 'Trà Đào Cam Dâu',
-                description: 'Sự kết hợp hoàn hảo giữa trà đào, cam và dâu tươi.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 55000,
-                rating: 5
-            },
-            {
-                id: '1001',
-                name: 'Trà Oolong Nướng',
-                description: 'Trà Oolong với hương vị nướng thơm đặc trưng.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 60000,
-                rating: 4
-            },
-            {
-                id: '1002',
-                name: 'Trà Sen Vàng',
-                description: 'Trà sen thơm dịu cùng hạt sen vàng giòn ngon.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 50000,
-                rating: 5
-            },
-            {
-                id: '1003',
-                name: 'Trà Xanh Tắc Mật Ong',
-                description: 'Trà xanh thanh mát hòa quyện cùng tắc và mật ong.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 48000,
-                rating: 4
-            },
-            {
-                id: '1004',
-                name: 'Trà Hoa Hồng',
-                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 52000,
-                rating: 5
-            },
-            {
-                id: '1005',
-                name: 'Trà Hoa Hồng',
-                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 52000,
-                rating: 5
-            },
-            {
-                id: '1006',
-                name: 'Trà Hoa Hồng',
-                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 52000,
-                rating: 5
-            },
-            {
-                id: '1007',
-                name: 'Trà Hoa Hồng',
-                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 52000,
-                rating: 5
-            },
-            {
-                id: '1008',
-                name: 'Trà Hoa Hồng',
-                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
-                image: 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg',
-                price: 52000,
-                rating: 5
-            }
-        ];
     },
 
     getTeaBestSellers() {

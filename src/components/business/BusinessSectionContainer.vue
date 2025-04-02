@@ -1,33 +1,33 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4">
-        <section class="max-w-7xl mx-auto mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#4d642d] relative">Mô hình kinh doanh</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
+    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white px-4 py-12">
+        <section class="mx-auto mb-12 max-w-7xl">
+            <h2 class="relative mb-12 text-center text-4xl font-bold text-[#4d642d] md:text-5xl">Mô hình kinh doanh</h2>
+            <div class="rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl md:p-8">
                 <BusinessModel />
             </div>
         </section>
 
-        <section class="max-w-4xl mx-auto mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#4d642d] relative">Chi phí dự kiến</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
+        <section class="mx-auto mb-12 max-w-4xl">
+            <h2 class="relative mb-12 text-center text-4xl font-bold text-[#4d642d] md:text-5xl">Chi phí dự kiến</h2>
+            <div class="rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl md:p-8">
                 <EstimatedCost />
             </div>
         </section>
 
-        <section class="max-w-4xl mx-auto mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#4d642d] relative">
+        <section class="mx-auto mb-12 max-w-4xl">
+            <h2 class="relative mb-12 text-center text-4xl font-bold text-[#4d642d] md:text-5xl">
                 Lợi nhuận 6 tháng hơn 180 triệu
             </h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
+            <div class="rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl md:p-8">
                 <ExpectedProfit />
             </div>
         </section>
 
-        <section class="max-w-4xl mx-auto mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#4d642d] relative">
+        <section class="mx-auto mb-12 max-w-4xl">
+            <h2 class="relative mb-12 text-center text-4xl font-bold text-[#4d642d] md:text-5xl">
                 Quy trình nhượng quyền
             </h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
+            <div class="rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl md:p-8">
                 <FranchiseProcess />
             </div>
         </section>

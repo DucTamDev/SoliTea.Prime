@@ -2,18 +2,18 @@
 <template>
     <section class="mb-20">
         <h2
-            class="text-4xl font-bold text-teal-800 text-center mb-10 animate-fade-in-up"
+            class="animate-fade-in-up mb-10 text-center text-4xl font-bold text-teal-800"
             :class="{ 'delay-200': delay === 200, 'delay-400': delay === 400 }"
         >
             {{ title }}
         </h2>
-        <div class="flex flex-wrap gap-6 justify-center max-w-[1400px] mx-auto px-4">
+        <div class="mx-auto flex max-w-[1400px] flex-wrap justify-center gap-6 px-4">
             <ProductCard v-for="(product, index) in visibleProducts" :key="index" :product="product" />
         </div>
-        <div class="text-center mt-8" v-if="products.length > initialDisplayCount">
+        <div class="mt-8 text-center" v-if="products.length > initialDisplayCount">
             <button
                 @click="toggleShowMore"
-                class="bg-teal-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-teal-700 transition-all duration-300"
+                class="rounded-full bg-teal-600 px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-teal-700"
             >
                 {{ showMore ? 'Xem thêm' : 'Thu gọn' }}
             </button>

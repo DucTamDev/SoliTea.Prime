@@ -1,6 +1,6 @@
 <!-- src/views/Products.vue -->
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-teal-50 to-white overflow-hidden">
+    <div class="min-h-screen overflow-hidden bg-gradient-to-b from-teal-50 to-white">
         <main class="container mx-auto px-4 py-16">
             <ProductList title="Trà Best Sellers" :products="teaBestSellers" />
             <ProductList
@@ -23,7 +23,7 @@ interface Product {
     image: string;
 }
 
-const tempImage = 'src/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg';
+const tempImage = new URL('@/assets/images/products/best-sellers-tea/tra-dao-cam-dau.jpg', import.meta.url).href;
 
 const teaBestSellers: Product[] = [
     {

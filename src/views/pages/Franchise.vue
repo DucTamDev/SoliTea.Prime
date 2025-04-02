@@ -1,15 +1,17 @@
 <!-- src/views/Franchise.vue -->
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-teal-50 to-white overflow-hidden">
+    <div class="min-h-screen overflow-hidden bg-gradient-to-b from-teal-50 to-white">
         <!-- Header -->
-        <header class="bg-teal-800 text-white py-24 text-center">
-            <div class="container mx-auto px-4">
+        <header class="bg-teal-900 py-24 text-center text-white">
+            <div class="container mx-auto px-6 md:px-12 lg:px-16">
                 <h1
-                    class="text-5xl md:text-6xl font-extrabold tracking-tight animate-fade-in-down bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-white"
+                    class="motion-safe:animate-fade-in-down bg-gradient-to-r from-teal-300 via-white to-teal-100 bg-clip-text text-4xl font-extrabold leading-[1.3] tracking-tight text-transparent sm:leading-[1.25] md:text-6xl md:leading-[1.2] lg:text-7xl lg:leading-[1.15] xl:leading-[1.1]"
                 >
                     Quy trình nhượng quyền Soli
                 </h1>
-                <p class="mt-6 text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in-up delay-200">
+                <p
+                    class="motion-safe:animate-fade-in-up mx-auto mt-6 max-w-3xl text-lg text-teal-200 delay-200 md:text-xl lg:text-2xl"
+                >
                     Hành trình hợp tác chuyên nghiệp để xây dựng thương hiệu trà sữa Soli đẳng cấp toàn cầu.
                 </p>
             </div>
@@ -22,39 +24,39 @@
                 <div
                     v-for="(step, index) in franchiseSteps"
                     :key="index"
-                    class="relative flex flex-col md:flex-row items-center gap-8 animate-slide-in"
+                    class="animate-slide-in relative flex flex-col items-center gap-8 md:flex-row"
                     :class="{ 'md:flex-row-reverse': index % 2 !== 0 }"
                 >
                     <!-- Step Number & Image -->
-                    <div class="relative w-56 h-56 group z-10">
+                    <div class="group relative z-10 h-56 w-56">
                         <div
-                            class="absolute inset-0 flex items-center justify-center text-5xl font-bold text-white bg-teal-600 rounded-full shadow-lg transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 z-20"
+                            class="absolute inset-0 z-20 flex transform items-center justify-center rounded-full bg-teal-600 text-5xl font-bold text-white shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110"
                         >
                             {{ String(index + 1).padStart(2, '0') }}
                         </div>
                         <img
                             src="@/assets/images/tiem-tra-01.jpg"
                             :alt="step.title"
-                            class="w-full h-full object-cover rounded-full shadow-xl transform transition-transform duration-500 group-hover:scale-105"
+                            class="h-full w-full transform rounded-full object-cover shadow-xl transition-transform duration-500 group-hover:scale-105"
                         />
                         <div
-                            class="absolute inset-0 bg-teal-600 bg-opacity-0 group-hover:bg-opacity-20 rounded-full transition-opacity duration-500"
+                            class="absolute inset-0 rounded-full bg-teal-600 bg-opacity-0 transition-opacity duration-500 group-hover:bg-opacity-20"
                         ></div>
                     </div>
                     <!-- Step Content -->
                     <div
-                        class="flex-1 bg-white p-6 rounded-xl shadow-md transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+                        class="flex-1 transform rounded-xl bg-white p-6 shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
                     >
-                        <h2 class="text-3xl font-semibold text-teal-800 mb-4">{{ step.title }}</h2>
-                        <p class="text-gray-700 text-lg leading-relaxed">{{ step.description }}</p>
+                        <h2 class="mb-4 text-3xl font-semibold text-teal-800">{{ step.title }}</h2>
+                        <p class="text-lg leading-relaxed text-gray-700">{{ step.description }}</p>
                     </div>
                     <!-- Arrow -->
                     <div
                         v-if="index < franchiseSteps.length - 1"
-                        class="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 z-0"
+                        class="absolute bottom-[-40px] left-1/2 z-0 -translate-x-1/2 transform"
                     >
                         <svg
-                            class="w-12 h-12 text-teal-400 animate-bounce-slow"
+                            class="animate-bounce-slow h-12 w-12 text-teal-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -108,14 +110,14 @@
             </section>
 
             <!-- Call to Action -->
-            <section class="text-center py-12 bg-teal-100 rounded-xl shadow-md animate-slide-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-800 mb-4">Tham gia hành trình cùng Soli</h2>
-                <p class="text-gray-700 mb-6 max-w-2xl mx-auto text-lg">
+            <section class="animate-slide-up rounded-xl bg-teal-100 py-12 text-center shadow-md">
+                <h2 class="mb-4 text-3xl font-bold text-teal-800 md:text-4xl">Tham gia hành trình cùng Soli</h2>
+                <p class="mx-auto mb-6 max-w-2xl text-lg text-gray-700">
                     Hãy đến thưởng thức một ly trà sữa Soli hoặc trở thành đối tác của chúng tôi để cùng lan tỏa hương
                     vị tuyệt vời này!
                 </p>
                 <button
-                    class="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition-transform duration-300 transform hover:scale-105"
+                    class="transform rounded-full bg-teal-600 px-8 py-3 text-white transition-transform duration-300 hover:scale-105 hover:bg-teal-700"
                     @click="handleContact"
                 >
                     Liên hệ ngay
@@ -211,6 +213,7 @@ const handleContact = (): void => {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -222,6 +225,7 @@ const handleContact = (): void => {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -233,6 +237,7 @@ const handleContact = (): void => {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -244,6 +249,7 @@ const handleContact = (): void => {
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
