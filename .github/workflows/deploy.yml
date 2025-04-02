@@ -6,22 +6,22 @@ on:
       - deploy-github  # Trigger on push to the deploy-github branch
   workflow_dispatch:  # Allow manual trigger from the Actions tab
 
-# Permissions for writing to the repository
-permissions:
-  contents: write
-
 jobs:
-  build-and-deploy:
+  checkout:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository manually using HTTPS
+      # Stage 1: Checkout source code
       - name: Checkout repository
         run: |
-          git clone https://github.com/${{ github.repository }} .
+          git clone https://github.com/${{ github.repository }} /tmp/repo
           pwd  # Log current directory for debugging
-          ls -la  # List contents for debugging
+          ls -la /tmp/repo  # List contents for debugging
 
-      # Step 2: Set up Node.js manually with sudo
+  build:
+    runs-on: ubuntu-latest
+    needs: checkout  # Depends on checkout job
+    steps:
+      # Stage 2: Set up environment and build
       - name: Set up Node.js
         run: |
           curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
@@ -29,22 +29,30 @@ jobs:
           node --version  # Verify Node.js version (22.9.0)
           npm --version  # Verify npm is installed
 
-      # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install || exit 1
+        run: |
+          cd /tmp/repo
+          npm install || exit 1
 
-      # Step 4: Build the Vue app
       - name: Build the app
         run: |
+          cd /tmp/repo
           npm run build
           ls -la dist/ || echo "dist/ directory not found"  # Check if dist/ exists
-
-      # Step 5: Preserve dist/ and deploy to gh-pages branch
-      - name: Deploy to gh-pages branch
-        run: |
-          # Move dist/ to a temporary location to preserve it
+          # Move dist/ to a shared location for the deploy job
           mv dist /tmp/dist-tmp
           ls -la /tmp/dist-tmp/ || echo "dist-tmp not found"  # Verify move worked
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Depends on build job
+    steps:
+      # Stage 3: Deploy to gh-pages branch
+      - name: Deploy to gh-pages branch
+        run: |
+          # Clone repo again for deployment (since we need a fresh git context)
+          git clone https://github.com/${{ github.repository }} /tmp/deploy-repo
+          cd /tmp/deploy-repo
 
           # Configure git
           git config --global user.name "GitHub Action"
@@ -66,6 +74,9 @@ jobs:
           rm -rf ./*
           cp -r /tmp/dist-tmp/* . || { echo "Failed to copy /tmp/dist-tmp/*"; exit 1; }
           ls -la  # Verify files are copied
+          
+          # Ensure index.html is there
+          cat index.html || echo "index.html not found"
           
           # Clean up temporary directory
           rm -rf /tmp/dist-tmp
