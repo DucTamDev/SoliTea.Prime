@@ -1,157 +1,249 @@
-<!-- src/views/About.vue -->
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-teal-50 to-white">
-        <!-- Main Content -->
-        <main class="container mx-auto px-4 py-16">
-            <!-- Company Introduction -->
-            <section class="animate-fade-in mb-16">
-                <h2 class="mb-8 text-4xl font-bold tracking-tight text-teal-800 md:text-5xl">1.1 Giới thiệu về Soli</h2>
-                <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-                    <div class="space-y-4">
-                        <p class="text-lg leading-relaxed text-gray-700">
-                            Thành lập vào năm 2020, <span class="font-semibold text-teal-600">Soli</span> ra đời từ ước
-                            mơ mang đến những ly trà sữa không chỉ ngon mà còn là tác phẩm nghệ thuật. Chúng tôi tự hào
-                            kết hợp <span class="italic">trà thượng hạng từ cao nguyên Việt Nam</span>, sữa tươi nguyên
-                            chất và topping homemade để tạo nên dấu ấn riêng biệt.
-                        </p>
-                        <p class="text-lg leading-relaxed text-gray-700">
-                            Với hơn <span class="font-semibold">50 chi nhánh</span> trải dài khắp Việt Nam cùng hàng
-                            ngàn khách hàng trung thành, Soli đang từng bước khẳng định vị thế trong lòng những người
-                            yêu trà sữa qua chất lượng và sự tận tâm.
-                        </p>
-                    </div>
-                    <div class="group relative h-96 w-full">
-                        <img
-                            src="@/assets/images/tiem-tra-01.jpg"
-                            alt="Soli Introduction"
-                            class="h-full w-full transform rounded-lg object-cover shadow-md transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div
-                            class="absolute inset-0 rounded-lg bg-teal-600 bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-20"
-                        ></div>
+    <div class="page-wrapper min-h-screen bg-gray-50 font-sans">
+        <!-- Hero Section -->
+        <section
+            class="hero py-8 sm:py-12 md:py-16 px-4 text-center text-white bg-gradient-to-br from-teal-400 to-teal-200"
+        >
+            <div class="hero-content max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+                <h1
+                    class="hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-2 sm:mb-4"
+                >
+                    Soli - Hương Vị Trà Sữa Việt
+                </h1>
+                <p
+                    class="hero-subtitle text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
+                >
+                    Mang nghệ thuật trà sữa Việt Nam đến từng khoảnh khắc của bạn
+                </p>
+            </div>
+        </section>
+
+        <!-- Introduction Section (1.1) -->
+        <section class="intro-section py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+            <h2
+                class="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 text-center mb-6 sm:mb-8 md:mb-10"
+            >
+                1.1 Giới thiệu về Soli
+            </h2>
+            <div
+                class="intro-list max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto space-y-4 sm:space-y-6"
+            >
+                <div
+                    class="intro-item flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300"
+                >
+                    <div class="intro-icon text-xl sm:text-2xl font-bold text-teal-400">☕</div>
+                    <div class="intro-content flex-1">
+                        <h3
+                            data-v-a1a712e6=""
+                            class="business-title text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-teal-600 mb-1 sm:mb-2"
+                        >
+                            {{ introduction[0].title }}
+                        </h3>
+                        <p
+                            class="intro-desc text-xs sm:text-sm md:text-base text-gray-600"
+                            v-html="introduction[0].description"
+                        ></p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Vision -->
-            <section class="animate-slide-up mb-16 rounded-xl bg-teal-50 py-12 shadow-md">
-                <h2 class="mb-8 text-center text-4xl font-bold text-teal-800 md:text-5xl">1.2 Tầm nhìn</h2>
-                <p class="mx-auto max-w-3xl text-center text-lg leading-relaxed text-gray-700">
-                    Đến năm <span class="font-semibold">2030</span>, Soli hướng tới trở thành thương hiệu trà sữa Việt
-                    Nam đầu tiên hiện diện tại <span class="font-semibold">20 quốc gia</span>, mang hương vị quê hương
-                    vươn xa thế giới. Chúng tôi không ngừng sáng tạo để mỗi ly trà sữa là một câu chuyện, một trải
-                    nghiệm đáng nhớ.
-                </p>
-            </section>
+        <!-- Vision Section (1.2) -->
+        <section class="vision-section py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+            <h2
+                class="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 text-center mb-6 sm:mb-8 md:mb-10"
+            >
+                1.2 Tầm nhìn
+            </h2>
+            <div
+                class="vision-list max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto space-y-4 sm:space-y-6"
+            >
+                <div
+                    class="vision-item flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300"
+                >
+                    <div class="vision-icon text-xl sm:text-2xl font-bold text-teal-400">🌍</div>
+                    <div class="vision-content flex-1">
+                        <h3
+                            data-v-a1a712e6=""
+                            class="business-title text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-teal-600 mb-1 sm:mb-2"
+                        >
+                            {{ vision[0].title }}
+                        </h3>
+                        <p
+                            class="vision-desc text-xs sm:text-sm md:text-base text-gray-600"
+                            v-html="vision[0].description"
+                        ></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Mission -->
-            <section class="animate-fade-in mb-16">
-                <h2 class="mb-8 text-4xl font-bold text-teal-800 md:text-5xl">1.3 Sứ mệnh</h2>
-                <div class="space-y-6">
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        Tại Soli, sứ mệnh của chúng tôi là
-                        <span class="font-semibold text-teal-600">lan tỏa niềm vui</span> qua từng ly trà sữa. Chúng tôi
-                        cam kết:
-                    </p>
-                    <ul class="grid grid-cols-1 gap-4">
-                        <li class="flex items-start text-lg text-gray-700">
-                            <span class="mr-2 text-teal-600">•</span> Mang đến sản phẩm chất lượng cao, an toàn và tốt
-                            cho sức khỏe.
-                        </li>
-                        <li class="flex items-start text-lg text-gray-700">
-                            <span class="mr-2 text-teal-600">•</span> Tạo dựng cộng đồng yêu trà sữa gắn kết, nơi mọi
-                            người chia sẻ niềm hạnh phúc.
-                        </li>
-                        <li class="col-span-full flex items-start text-lg text-gray-700">
-                            <span class="mr-2 text-teal-600">•</span> Góp phần quảng bá văn hóa trà Việt Nam ra thế giới
-                            qua từng ly thức uống.
+        <!-- Mission Section (1.3) -->
+        <section class="mission-section py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+            <div class="mission-container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+                <h2
+                    class="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 text-center mb-6 sm:mb-8 md:mb-10"
+                >
+                    1.3 Sứ mệnh
+                </h2>
+                <div class="mission-content bg-white p-4 sm:p-6 rounded-xl shadow-lg">
+                    <p
+                        class="mission-intro text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6"
+                        v-html="mission.intro"
+                    ></p>
+                    <ul class="mission-list space-y-2 sm:space-y-4">
+                        <li
+                            v-for="(item, index) in mission.items"
+                            :key="index"
+                            class="mission-item flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                        >
+                            <span class="mission-icon text-lg sm:text-xl text-teal-600">{{ item.icon }}</span>
+                            <span class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600">{{
+                                item.text
+                            }}</span>
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Core Values -->
-            <section class="animate-slide-up mb-16">
-                <h2 class="mb-8 text-4xl font-bold text-teal-800 md:text-5xl">1.4 Giá trị cốt lõi</h2>
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    <div
-                        v-for="(value, index) in coreValues"
-                        :key="index"
-                        class="transform rounded-lg bg-white p-6 text-center shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                    >
-                        <h3 class="mb-2 text-xl font-semibold text-teal-700">{{ value.title }}</h3>
-                        <p class="text-gray-600">{{ value.description }}</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Business Areas -->
-            <section class="animate-fade-in mb-16">
-                <h2 class="mb-8 text-4xl font-bold text-teal-800 md:text-5xl">1.5 Lĩnh vực hoạt động</h2>
-                <div class="space-y-12">
-                    <div
-                        v-for="(area, index) in businessAreas"
-                        :key="index"
-                        :class="index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'"
-                        class="flex flex-col items-center gap-6 md:flex"
-                    >
-                        <div class="group relative h-48 w-72">
-                            <img
-                                src="@/assets/images/tiem-tra-01.jpg"
-                                :alt="area.title"
-                                class="h-full w-full transform rounded-lg object-cover shadow-md transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div
-                                class="absolute inset-0 rounded-lg bg-teal-600 bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-20"
-                            ></div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-semibold text-teal-700">{{ area.title }}</h3>
-                            <p class="mt-2 text-lg text-gray-600">{{ area.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Call to Action -->
-            <section class="animate-slide-up rounded-xl bg-teal-100 py-12 text-center shadow-md">
-                <h2 class="mb-4 text-3xl font-bold text-teal-800 md:text-4xl">Tham gia hành trình cùng Soli</h2>
-                <p class="mx-auto mb-6 max-w-2xl text-lg text-gray-700">
-                    Hãy đến thưởng thức một ly trà sữa Soli hoặc trở thành đối tác của chúng tôi để cùng lan tỏa hương
-                    vị tuyệt vời này!
-                </p>
-                <button
-                    class="transform rounded-full bg-teal-600 px-8 py-3 text-white transition-transform duration-300 hover:scale-105 hover:bg-teal-700"
-                    @click="handleContact"
+        <!-- Core Values Section (1.4) -->
+        <section class="values-section py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+            <h2
+                class="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 text-center mb-6 sm:mb-8 md:mb-10"
+            >
+                1.4 Giá trị cốt lõi
+            </h2>
+            <div
+                class="values-grid max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
+            >
+                <div
+                    v-for="(value, index) in coreValues"
+                    :key="index"
+                    class="value-item flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300"
                 >
-                    Liên hệ ngay
+                    <div class="value-icon text-xl sm:text-2xl font-bold text-teal-400">{{ value.icon }}</div>
+                    <div class="value-content flex-1">
+                        <h3
+                            class="value-title text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-teal-600 mb-1 sm:mb-2"
+                        >
+                            {{ value.title }}
+                        </h3>
+                        <p class="value-desc text-xs sm:text-sm md:text-base text-gray-600">{{ value.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Areas Section (1.5) -->
+        <section class="business-section py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+            <h2
+                class="section-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 text-center mb-6 sm:mb-8 md:mb-10"
+            >
+                1.5 Lĩnh vực hoạt động
+            </h2>
+            <div
+                class="business-list max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto space-y-4 sm:space-y-6"
+            >
+                <div
+                    v-for="(area, index) in businessAreas"
+                    :key="index"
+                    class="business-item flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300"
+                >
+                    <div class="business-number text-xl sm:text-2xl font-bold text-teal-400">
+                        {{ String(index + 1).padStart(2, '0') }}
+                    </div>
+                    <div class="business-content flex-1">
+                        <h3
+                            class="business-title text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-teal-600 mb-1 sm:mb-2"
+                        >
+                            {{ area.title }}
+                        </h3>
+                        <p class="business-desc text-xs sm:text-sm md:text-base text-gray-600">
+                            {{ area.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Call to Action -->
+        <footer class="footer py-8 sm:py-10 md:py-12 px-4 bg-teal-600 text-white text-center">
+            <div class="footer-content max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">
+                <h2 class="footer-title text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+                    Khám phá Soli ngay hôm nay
+                </h2>
+                <button
+                    class="footer-btn bg-white text-teal-600 font-semibold py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg"
+                >
+                    Tham gia cùng chúng tôi
                 </button>
-            </section>
-        </main>
+            </div>
+        </footer>
     </div>
 </template>
 
 <script setup lang="ts">
-// Define TypeScript interfaces for data structures
-interface CoreValue {
-    title: string;
+interface Item {
+    title?: string; // Optional for 1.1 and 1.2 where there's no title
     description: string;
+    icon?: string; // Added for 1.4 to include icons
 }
 
-interface BusinessArea {
-    title: string;
-    description: string;
+interface MissionItem {
+    icon: string;
+    text: string;
 }
 
-// Define reactive data with TypeScript
-const coreValues: CoreValue[] = [
-    { title: 'Chất lượng', description: 'Nguyên liệu tuyển chọn từ thiên nhiên, quy trình sản xuất khép kín.' },
-    { title: 'Sáng tạo', description: 'Đột phá trong công thức, mang đến hương vị độc đáo.' },
-    { title: 'Khách hàng', description: 'Lắng nghe và phục vụ tận tâm vì nụ cười của bạn.' },
-    { title: 'Bền vững', description: 'Sử dụng bao bì thân thiện, bảo vệ môi trường xanh.' }
+interface Mission {
+    intro: string;
+    items: MissionItem[];
+}
+
+// Data for Section 1.1
+const introduction: Item[] = [
+    {
+        title: 'Công ty TNHH Soli',
+        description:
+            'Thành lập vào năm <span class="highlight">2020</span>, Soli ra đời từ ước mơ mang đến những ly trà sữa không chỉ ngon mà còn là <span class="italic">tác phẩm nghệ thuật</span>. Chúng tôi tự hào kết hợp trà thượng hạng từ cao nguyên Việt Nam, sữa tươi nguyên chất và topping homemade để tạo nên dấu ấn riêng biệt. Với hơn <span class="highlight">50 chi nhánh</span> trải dài khắp Việt Nam cùng hàng ngàn khách hàng trung thành, Soli đang từng bước khẳng định vị thế trong lòng những người yêu trà sữa qua chất lượng và sự tận tâm.',
+        icon: '☕'
+    }
 ];
 
-const businessAreas: BusinessArea[] = [
+// Data for Section 1.2
+const vision: Item[] = [
+    {
+        title: '',
+        description:
+            'Đến năm <span class="highlight">2030</span>, Soli hướng tới trở thành thương hiệu trà sữa Việt Nam đầu tiên hiện diện tại <span class="highlight">20 quốc gia</span>, mang hương vị quê hương vươn xa thế giới. Mỗi ly trà sữa là một câu chuyện, một trải nghiệm đáng nhớ.',
+        icon: '🌍'
+    }
+];
+
+// Data for Section 1.3
+const mission: Mission = {
+    intro: 'Tại Soli, chúng tôi cam kết <span class="highlight teal">lan tỏa niềm vui</span> qua từng ly trà sữa với:',
+    items: [
+        { icon: '✔', text: 'Sản phẩm chất lượng cao, an toàn và tốt cho sức khỏe' },
+        { icon: '🤝', text: 'Cộng đồng yêu trà sữa gắn kết, chia sẻ niềm hạnh phúc' },
+        { icon: '🇻🇳', text: 'Quảng bá văn hóa trà Việt Nam ra thế giới' }
+    ]
+};
+
+// Data for Section 1.4
+const coreValues: Item[] = [
+    {
+        title: 'Chất lượng',
+        description: 'Nguyên liệu tuyển chọn từ thiên nhiên, quy trình sản xuất khép kín.',
+        icon: '🌿'
+    },
+    { title: 'Sáng tạo', description: 'Đột phá trong công thức, mang đến hương vị độc đáo.', icon: '💡' },
+    { title: 'Khách hàng', description: 'Lắng nghe và phục vụ tận tâm vì nụ cười của bạn.', icon: '❤️' },
+    { title: 'Bền vững', description: 'Sử dụng bao bì thân thiện, bảo vệ môi trường xanh.', icon: '♻️' }
+];
+
+// Data for Section 1.5
+const businessAreas: Item[] = [
     {
         title: 'Sản xuất & Phân phối',
         description:
@@ -168,41 +260,38 @@ const businessAreas: BusinessArea[] = [
             'Mô hình nhượng quyền linh hoạt, hỗ trợ đối tác khởi nghiệp với thương hiệu Soli trên toàn quốc và quốc tế.'
     }
 ];
-
-// Define methods with TypeScript
-const handleContact = (): void => {
-    console.log('Contact button clicked!');
-};
 </script>
 
-<style scoped>
-/* Animation keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+<style scoped lang="scss">
+/* Custom styles not easily achievable with Tailwind */
+.highlight {
+    font-weight: 700;
+    color: #0f766e; /* teal-700 */
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.highlight.teal {
+    font-weight: 700;
+    color: #2dd4bf; /* teal-400 */
 }
 
-/* Animation classes */
-.animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
+.italic {
+    font-style: italic;
 }
 
-.animate-slide-up {
-    animation: slideUp 0.8s ease-out;
+.intro-item,
+.vision-item,
+.value-item,
+.business-item {
+    transition: transform 0.3s ease;
+}
+
+.mission-item {
+    transition: background-color 0.3s ease;
+}
+
+.footer-btn {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 </style>

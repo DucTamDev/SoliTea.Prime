@@ -24,10 +24,9 @@ const benefits = ref<string[]>([
     'Đội ngũ nhân sự chuyên nghiệp hỗ trợ thường xuyên',
     'Tỉ lệ thành công cao từ 80%'
 ]);
-
 const images = ref<{ src: string; alt: string }[]>([
-    { src: 'src/assets/images/tiem-tra-01.jpg', alt: 'Mô hình kinh doanh 1' },
-    { src: 'src/assets/images/tiem-tra-02.jpg', alt: 'Mô hình kinh doanh 2' }
+    { src: new URL('@/assets/images/tiem-tra-01.jpg', import.meta.url).href, alt: 'Mô hình kinh doanh 1' },
+    { src: new URL('@/assets/images/tiem-tra-02.jpg', import.meta.url).href, alt: 'Mô hình kinh doanh 2' }
 ]);
 </script>
 
