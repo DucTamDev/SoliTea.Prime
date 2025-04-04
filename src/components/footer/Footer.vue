@@ -17,7 +17,7 @@
                     </p>
                     <div class="flex justify-center space-x-6 md:justify-start">
                         <a
-                            href="https://www.facebook.com/tiemtrasoli.username"
+                            :href="contactData.facebookLink"
                             target="_blank"
                             class="text-[#1877F2] transition-colors duration-300 hover:text-[#0A62D0]"
                         >
@@ -112,6 +112,7 @@
 
 <script setup lang="ts">
 // No complex logic needed
+import { contactData } from '@/statics/ContactServiceStatic';
 </script>
 
 <style lang="scss" scoped>
