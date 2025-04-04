@@ -16,7 +16,6 @@ declare module 'vue' {
     ExpectedProfit: typeof import('./src/components/business/ExpectedProfit.vue')['default']
     FloatingConfigurator: typeof import('./src/components/FloatingConfigurator.vue')['default']
     Footer: typeof import('./src/components/footer/Footer.vue')['default']
-    FranchiseProcess: typeof import('./src/components/business/FranchiseProcess.vue')['default']
     FranchiseSteps: typeof import('./src/components/business/FranchiseSteps.vue')['default']
     Header: typeof import('./src/components/header/Header.vue')['default']
     HeaderNav: typeof import('./src/components/header/HeaderNav.vue')['default']

@@ -1,12 +1,12 @@
 <!-- src/views/ContactPage.vue -->
 <template>
-    <div class="contact-page min-h-screen bg-gray-100">
+    <div class="contact-page min-h-screenbg-gradient-to-b from-gray-50 to-teal-50 overflow-hidden">
         <!-- Hero Section (Smaller) -->
         <section
-            class="relative flex h-[50vh] items-center justify-center bg-cover bg-center text-white"
+            class="relative flex h-[40vh] items-center justify-center bg-cover bg-center text-white"
             style="background-image: url('@/assets/images/soli-tea-bg.jpg')"
         >
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 to-teal-200"></div>
             <div class="relative z-10 px-4 text-center">
                 <h1 class="animate-slide-in mb-4 text-4xl font-extrabold drop-shadow-lg md:text-5xl">
                     {{ contactData.heroTitle }}

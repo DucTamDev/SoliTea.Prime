@@ -1,22 +1,19 @@
 <!-- src/views/About.vue -->
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50 font-sans overflow-hidden">
-        <!-- Hero Section with Parallax -->
-        <section class="relative h-[60vh] flex items-center justify-center text-white bg-teal-600 overflow-hidden">
-            <div
-                class="absolute inset-0 bg-cover bg-center parallax-bg"
-                style="background-image: url('@/assets/images/soli-tea-bg.jpg')"
-            ></div>
-            <div class="absolute inset-0 bg-teal-800/70"></div>
-            <div class="relative z-10 text-center px-4">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight reveal-up">
-                    Soli - Hương Vị Trà Sữa Việt
+    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50 overflow-hidden">
+        <!-- Hero Section -->
+        <header class="py-8 sm:py-12 md:py-16 px-4 text-center text-white bg-gradient-to-br from-teal-400 to-teal-200">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12">
+                <h1
+                    class="animate-fade-in text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+                >
+                    Soli - Hương vị trà sữa Việt
                 </h1>
-                <p class="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto reveal-up delay-200">
+                <p class="animate-fade-in mx-auto mt-4 max-w-2xl text-base text-teal-100 sm:mt-6 sm:text-lg md:text-xl">
                     Mang nghệ thuật trà sữa Việt Nam đến từng khoảnh khắc của bạn
                 </p>
             </div>
-        </section>
+        </header>
 
         <!-- Introduction Section -->
         <section class="py-16 px-4 sm:px-6 relative z-10">
@@ -127,18 +124,18 @@
         </section>
 
         <!-- Footer Call to Action -->
-        <footer class="py-16 px-4 bg-teal-600 text-white text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal-up">
-                    {{ contactData.footerTitle }}
+        <footer class="py-8 sm:py-10 md:py-12 px-4 bg-teal-600 text-white text-center">
+            <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">
+                <h2 class="animate-slide-in text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+                    Khám phá Soli ngay hôm nay
                 </h2>
                 <a
                     :href="contactData.facebookLink"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-block bg-white text-teal-600 font-semibold py-3 px-8 rounded-full hover:bg-teal-50 hover:scale-105 transition-all duration-300 text-lg reveal-up delay-200"
+                    class="animate-slide-in inline-block bg-white text-teal-600 font-semibold py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg"
                 >
-                    {{ contactData.footerButtonText }}
+                    Tham gia cùng chúng tôi
                 </a>
             </div>
         </footer>
@@ -157,15 +154,6 @@ const businessAreas = BUSINESS_AREAS;
 </script>
 
 <style scoped lang="scss">
-/* Parallax Background */
-.parallax-bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-out;
-}
-
 /* Reveal Animations */
 @keyframes revealUp {
     from {
@@ -189,6 +177,20 @@ const businessAreas = BUSINESS_AREAS;
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
 .reveal-up {
     opacity: 0;
     animation: revealUp 0.8s ease-out forwards;
