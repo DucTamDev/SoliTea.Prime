@@ -1,7 +1,8 @@
 <template>
     <div
-        class="animate-slide-in w-full flex-shrink-0 transform overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 ease-out"
-        :class="{ 'is-active': isActive }"
+        v-if="product"
+        class="w-full flex-shrink-0 overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 ease-out animate-slide-in"
+        :class="{ 'translate-y-[-0.5rem] scale-[1.03] shadow-xl': isActive }"
         @touchstart="handleTouchStart"
         @touchend="handleTouchEnd"
         @mouseover="isActive = true"
@@ -10,7 +11,8 @@
         <img
             :src="product.image"
             :alt="product.name"
-            class="h-40 w-full object-cover sm:h-48 transition-all duration-300"
+            class="h-40 w-full object-cover sm:h-48 transition-opacity duration-300"
+            :class="{ 'opacity-95': isActive }"
         />
         <div class="p-3 sm:p-4">
             <h3 class="mb-1 line-clamp-1 font-semibold text-teal-700 text-base sm:text-lg md:text-xl">
@@ -22,6 +24,7 @@
             </p>
         </div>
     </div>
+    <div v-else class="text-red-500 p-4">Error: Product data is missing</div>
 </template>
 
 <script setup lang="ts">
@@ -34,22 +37,35 @@ interface Product {
     image: string;
 }
 
-defineProps<{
-    product: Product;
+const props = defineProps<{
+    product: Product | null; // Allow null to handle edge cases
 }>();
 
 const isActive = ref(false);
+const touchTimeout = ref<number | null>(null);
+
+// Add a check to prevent accessing undefined props
+if (!props.product) {
+    console.error('Product prop is missing or invalid');
+    throw new Error('ProductCard requires a valid product prop');
+}
 
 const handleTouchStart = () => {
+    if (touchTimeout.value) clearTimeout(touchTimeout.value);
     isActive.value = true;
 };
 
 const handleTouchEnd = () => {
-    // Add a slight delay to make the effect feel more deliberate on mobile
-    setTimeout(() => {
+    touchTimeout.value = setTimeout(() => {
         isActive.value = false;
     }, 150);
 };
+
+// Fix: Import and use onUnmounted
+import { onUnmounted } from 'vue';
+onUnmounted(() => {
+    if (touchTimeout.value) clearTimeout(touchTimeout.value);
+});
 </script>
 
 <style scoped>
@@ -68,29 +84,16 @@ const handleTouchEnd = () => {
     animation: slideIn 0.5s ease-out;
 }
 
-/* Base styles for desktop hover */
 @media (hover: hover) and (pointer: fine) {
     .animate-slide-in:hover {
-        transform: translateY(-0.5rem) scale(1.03); /* Lift and slight zoom */
+        transform: translateY(-0.5rem) scale(1.03);
         box-shadow:
             0 15px 25px -5px rgba(0, 0, 0, 0.15),
-            0 8px 10px -5px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+            0 8px 10px -5px rgba(0, 0, 0, 0.1);
     }
 
     .animate-slide-in:hover img {
-        opacity: 0.95; /* Subtle fade for image */
+        opacity: 0.95;
     }
-}
-
-/* Active styles for touch devices */
-.animate-slide-in.is-active {
-    transform: translateY(-0.5rem) scale(1.03); /* Same lift and zoom */
-    box-shadow:
-        0 15px 25px -5px rgba(0, 0, 0, 0.15),
-        0 8px 10px -5px rgba(0, 0, 0, 0.1); /* Same shadow */
-}
-
-.animate-slide-in.is-active img {
-    opacity: 0.95; /* Same image fade */
 }
 </style>
