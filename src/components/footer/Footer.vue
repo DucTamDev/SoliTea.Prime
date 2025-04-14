@@ -84,19 +84,19 @@
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-envelope"></i>
                             </span>
-                            contact@solitea.com
+                            {{ contactData.email }}
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-phone"></i>
                             </span>
-                            +84 123 456 789
+                            {{ contactData.phone }}
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-map-marker"></i>
                             </span>
-                            123 Đường Trà Sữa, TP. Hồ Chí Minh
+                            {{ contactData.address }}
                         </li>
                     </ul>
                 </div>

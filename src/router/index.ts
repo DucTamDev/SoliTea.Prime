@@ -1,5 +1,4 @@
 import { AppConstants } from '@/core/constants/app.constants';
-import AdminLayout from '@/layout/AdminLayout.vue';
 import BlankLayout from '@/layout/BlankLayout.vue';
 import MainLayout from '@/layout/MainLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -27,11 +26,21 @@ const router = createRouter({
                     meta: { title: 'Giới thiệu' }
                 },
                 {
-                    path: 'san-pham',
-                    alias: 'product',
-                    name: 'Product',
-                    component: () => import('@/views/pages/Product.vue'),
-                    meta: { title: 'Sản phẩm' }
+                    path: '/san-pham',
+                    children: [
+                        {
+                            path: '',
+                            name: 'Product',
+                            component: () => import('@/views/pages/Product.vue'),
+                            meta: { title: 'Sản Phẩm' }
+                        },
+                        {
+                            path: ':id',
+                            name: 'ProductDetail',
+                            component: () => import('@/components/product/ProductDetail.vue'),
+                            meta: { breadcrumb: 'Chi tiết Sản Phẩm' }
+                        }
+                    ]
                 },
                 {
                     path: 'nhuong-quyen',
@@ -57,130 +66,23 @@ const router = createRouter({
             ]
         },
         {
-            path: '/admin',
-            component: AdminLayout,
-            children: [
-                {
-                    path: '',
-                    name: 'dashboard',
-                    component: () => import('@/views/Dashboard.vue')
-                },
-                {
-                    path: '/uikit/formlayout',
-                    name: 'formlayout',
-                    component: () => import('@/views/uikit/FormLayout.vue')
-                },
-                {
-                    path: '/uikit/input',
-                    name: 'input',
-                    component: () => import('@/views/uikit/InputDoc.vue')
-                },
-                {
-                    path: '/uikit/button',
-                    name: 'button',
-                    component: () => import('@/views/uikit/ButtonDoc.vue')
-                },
-                {
-                    path: '/uikit/table',
-                    name: 'table',
-                    component: () => import('@/views/uikit/TableDoc.vue')
-                },
-                {
-                    path: '/uikit/list',
-                    name: 'list',
-                    component: () => import('@/views/uikit/ListDoc.vue')
-                },
-                {
-                    path: '/uikit/tree',
-                    name: 'tree',
-                    component: () => import('@/views/uikit/TreeDoc.vue')
-                },
-                {
-                    path: '/uikit/panel',
-                    name: 'panel',
-                    component: () => import('@/views/uikit/PanelsDoc.vue')
-                },
-
-                {
-                    path: '/uikit/overlay',
-                    name: 'overlay',
-                    component: () => import('@/views/uikit/OverlayDoc.vue')
-                },
-                {
-                    path: '/uikit/media',
-                    name: 'media',
-                    component: () => import('@/views/uikit/MediaDoc.vue')
-                },
-                {
-                    path: '/uikit/message',
-                    name: 'message',
-                    component: () => import('@/views/uikit/MessagesDoc.vue')
-                },
-                {
-                    path: '/uikit/file',
-                    name: 'file',
-                    component: () => import('@/views/uikit/FileDoc.vue')
-                },
-                {
-                    path: '/uikit/menu',
-                    name: 'menu',
-                    component: () => import('@/views/uikit/MenuDoc.vue')
-                },
-                {
-                    path: '/uikit/charts',
-                    name: 'charts',
-                    component: () => import('@/views/uikit/ChartDoc.vue')
-                },
-                {
-                    path: '/uikit/misc',
-                    name: 'misc',
-                    component: () => import('@/views/uikit/MiscDoc.vue')
-                },
-                {
-                    path: '/uikit/timeline',
-                    name: 'timeline',
-                    component: () => import('@/views/uikit/TimelineDoc.vue')
-                },
-                {
-                    path: '/pages/empty',
-                    name: 'empty',
-                    component: () => import('@/views/pages/Empty.vue')
-                },
-                {
-                    path: '/pages/crud',
-                    name: 'crud',
-                    component: () => import('@/views/pages/Crud.vue')
-                }
-            ]
-        },
-        {
             path: '/:pathMatch(.*)*',
             name: 'BlankLayout',
             component: BlankLayout,
             children: [
-                {
-                    path: 'auth/login',
-                    alias: 'login',
-                    name: 'Login',
-                    component: () => import('@/views/pages/auth/Login.vue'),
-                    meta: { title: 'login' }
-                },
-                {
-                    path: 'auth/access',
-                    name: 'accessDenied',
-                    component: () => import('@/views/pages/auth/Access.vue')
-                },
-                {
-                    path: 'auth/error',
-                    name: 'error',
-                    component: () => import('@/views/pages/auth/Error.vue')
-                },
                 {
                     path: 'pages/notfound',
                     alias: 'not-found',
                     name: 'NotFound',
                     component: () => import('@/views/pages/NotFound.vue'),
                     meta: { title: 'notfound' }
+                },
+                {
+                    path: 'pages/empty',
+                    alias: 'empty',
+                    name: 'Empty',
+                    component: () => import('@/views/pages/Empty.vue'),
+                    meta: { title: 'empty' }
                 },
                 {
                     path: '',
@@ -204,11 +106,6 @@ function hasPermission(user: any, roles: any) {
     return roles.includes(user.role);
 }
 
-// Hàm chuẩn hóa tiêu đề (viết hoa chữ cái đầu)
-function capitalizeTitle(str: string) {
-    return str.replace(/\b\w/g, (char) => char.toUpperCase());
-}
-
 router.beforeEach(async (to, from, next) => {
     const user = getUser();
 
@@ -218,12 +115,7 @@ router.beforeEach(async (to, from, next) => {
         }
     }
 
-    // const i18nInstance = await i18nPlugin.getI18n();
-
     const titleKey = (to.meta.title ?? '').toString().trim();
-    // const translatedTitle = titleKey ? (i18nInstance.global.t as (key: string) => string)(titleKey) : titleKey;
-
-    // document.title = translatedTitle ? `${AppConstants.AppName} - ${translatedTitle}` : AppConstants.AppName;
 
     document.title = titleKey ? `${AppConstants.AppName} - ${titleKey}` : AppConstants.AppName;
     next();

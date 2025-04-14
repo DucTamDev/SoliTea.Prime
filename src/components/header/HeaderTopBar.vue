@@ -1,40 +1,45 @@
 <!-- src/components/HeaderTopBar.vue -->
 <template>
-    <header class="header-topbar">
+    <header
+        class="header-topbar sticky top-0 z-[997] bg-white transition-all duration-[--header-section-transition-duration]"
+    >
         <div class="container mx-auto px-4">
-            <div class="header-content">
-                <!-- Logo Section -->
-                <router-link to="/" class="header-logo">
+            <div class="header-content flex flex-col items-center gap-4 py-2">
+                <!-- Logo Section (Centered) -->
+                <router-link
+                    to="/"
+                    class="header-logo flex items-center gap-2 text-2xl font-medium text-text no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 focus-visible:rounded-[--content-border-radius]"
+                >
                     <img
                         v-if="mergedProps.showLogoOption.image"
                         src="@/assets/images/logos/logo.png"
                         alt="Soli logo"
-                        class="header-logo-image"
+                        class="header-logo-image w-12 h-12 object-contain rounded-xl bg-white transition-all duration-300"
                     />
-                    <span v-if="mergedProps.showLogoOption.name" class="header-logo-text">
+                    <span v-if="mergedProps.showLogoOption.name" class="header-logo-text font-medium whitespace-nowrap">
                         {{ AppConstants.AppName.toUpperCase() }}
                     </span>
                 </router-link>
 
-                <!-- Hot Info Section -->
-                <div class="header-hot-info">
-                    <p>🚀 Chỉ với vốn đầu tư hợp lý 💰</p>
-                    <p>
+                <!-- Hot Info Section (Centered) -->
+                <div class="header-hot-info text-center text-sm font-semibold leading-6 tracking-wide">
+                    <p class="m-0">🚀 Chỉ với vốn đầu tư hợp lý 💰</p>
+                    <p class="m-0">
                         Bạn đã có thể sở hữu thương hiệu trà sữa
-                        <span class="highlight">SOLI!</span> ☕
+                        <span class="highlight text-[#ff5733]">SOLI!</span> ☕
                     </p>
                 </div>
 
                 <!-- Actions Section -->
-                <nav class="header-actions">
+                <nav class="header-actions flex gap-2">
                     <button
                         v-for="(visible, key) in mergedProps.showMenuOptions"
                         :key="key"
                         v-show="visible"
-                        class="header-action-btn"
+                        class="header-action-btn flex items-center justify-center w-10 h-10 rounded-full text-text bg-transparent border-none cursor-pointer transition-colors duration-[--element-transition-duration] hover:bg-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                         :aria-label="capitalizeFirstLetter(key)"
                     >
-                        <i :class="['pi', `pi-${key}`]"></i>
+                        <i :class="['pi', `pi-${key}`, 'text-xl']"></i>
                     </button>
                 </nav>
             </div>
@@ -75,179 +80,40 @@ const mergedProps = computed(() => ({
 const capitalizeFirstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 </script>
 
-<style lang="scss" scoped>
-.header-topbar {
-    position: sticky;
-    top: 0;
-    z-index: 997;
-    background-color: var(--surface-card);
-    transition: all var(--header-section-transition-duration);
-}
-
-.container {
-    padding: 0.5rem 1rem;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap; /* Cho phép xuống dòng */
-}
-
-/* Logo Styles */
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-    flex-shrink: 0;
-
-    &:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 2px;
-        border-radius: var(--content-border-radius);
-    }
-}
-
+<style scoped>
+/* Minimal scoped styles for non-Tailwind properties */
 .header-logo-image {
-    width: 3rem;
-    height: 3rem;
     object-fit: contain;
-    border-radius: 0.75rem;
-    background-color: #fff;
-    transition:
-        width 0.3s,
-        height 0.3s;
 }
 
-.header-logo-text {
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-/* Hot Info Styles */
-.header-hot-info {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    margin: 0 0.5rem;
-
-    p {
-        margin: 0;
-    }
-
-    .highlight {
-        color: #ff5733;
-    }
-}
-
-/* Actions Styles */
-.header-actions {
-    display: flex;
-    gap: 0.5rem;
-    flex-shrink: 0;
-}
-
-.header-action-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
+/* Ensure PrimeVue icons inherit text color */
+.pi {
     color: var(--text-color);
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color var(--element-transition-duration);
-
-    &:hover {
-        background-color: var(--surface-hover);
-    }
-
-    &:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 2px;
-    }
-
-    i {
-        font-size: 1.25rem;
-    }
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .header-topbar {
-        height: auto; /* Cho phép chiều cao tự điều chỉnh */
-    }
-
+/* Responsive layout adjustments */
+@media (min-width: 768px) {
     .header-content {
-        gap: 0.75rem;
-    }
-
-    .header-hot-info {
-        font-size: 0.8125rem; /* 13px */
-    }
-
-    .header-logo-image {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-
-    .header-action-btn {
-        width: 2rem;
-        height: 2rem;
-
-        i {
-            font-size: 1rem;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 0;
+    }
+
+    .header-logo {
+        order: 1; /* Center logo */
     }
 
     .header-hot-info {
-        font-size: 0.75rem; /* 12px */
+        order: 2; /* Centered hot info */
+        text-align: center;
+        margin: 0 auto;
         width: 100%;
-        margin: 0.25rem 0;
     }
 
     .header-actions {
-        justify-content: center;
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-logo-image {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .header-logo-text {
-        font-size: 1.25rem;
-    }
-
-    .header-action-btn {
-        width: 1.75rem;
-        height: 1.75rem;
-
-        i {
-            font-size: 0.875rem;
-        }
+        order: 3; /* Right side */
+        flex: 1;
+        justify-content: flex-end;
     }
 }
 </style>

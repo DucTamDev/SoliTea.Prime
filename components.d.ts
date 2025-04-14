@@ -12,6 +12,7 @@ declare module 'vue' {
     BestSellingWidget: typeof import('./src/components/dashboard/BestSellingWidget.vue')['default']
     BusinessModel: typeof import('./src/components/business/BusinessModel.vue')['default']
     BusinessSectionContainer: typeof import('./src/components/business/BusinessSectionContainer.vue')['default']
+    Button: typeof import('primevue/button')['default']
     EstimatedCost: typeof import('./src/components/business/EstimatedCost.vue')['default']
     ExpectedProfit: typeof import('./src/components/business/ExpectedProfit.vue')['default']
     FloatingConfigurator: typeof import('./src/components/FloatingConfigurator.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
     ImageGallery: typeof import('./src/components/business/ImageGallery.vue')['default']
     NotificationsWidget: typeof import('./src/components/dashboard/NotificationsWidget.vue')['default']
     ProductCard: typeof import('./src/components/product/ProductCard.vue')['default']
+    ProductDetail: typeof import('./src/components/product/ProductDetail.vue')['default']
     ProductList: typeof import('./src/components/product/ProductList.vue')['default']
     ProductSectionContainer: typeof import('./src/components/product/ProductSectionContainer.vue')['default']
     RecentSalesWidget: typeof import('./src/components/dashboard/RecentSalesWidget.vue')['default']
@@ -33,7 +35,6 @@ declare module 'vue' {
     SectionTitle: typeof import('./src/components/section/SectionTitle.vue')['default']
     SelectButton: typeof import('primevue/selectbutton')['default']
     StatsWidget: typeof import('./src/components/dashboard/StatsWidget.vue')['default']
-    Toast: typeof import('primevue/toast')['default']
   }
   export interface ComponentCustomProperties {
     StyleClass: typeof import('primevue/styleclass')['default']

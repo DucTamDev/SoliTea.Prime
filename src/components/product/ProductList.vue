@@ -1,12 +1,12 @@
 <template>
     <section class="mb-20">
-        <div class="mx-auto flex max-w-[1400px] flex-wrap justify-center gap-4 px-4 sm:gap-6">
+        <div class="mx-auto grid max-w-[1400px] gap-4 px-4 sm:gap-6">
             <ProductCard v-for="(product, index) in visibleProducts" :key="index" :product="product" />
         </div>
         <div class="mt-8 text-center" v-if="products.length > initialDisplayCount">
             <button
                 @click="toggleShowMore"
-                class="rounded-full bg-teal-600 px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg font-semibold text-white transition-all duration-300 hover:bg-teal-700"
+                class="rounded-full bg-primary px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg font-semibold text-primary-contrast transition-all duration-[--transition-duration] hover:bg-surface-hover hover:text-primary focus:outline-none focus:ring focus:ring-[--focus-ring-color]"
             >
                 {{ showMore ? 'Xem thêm' : 'Thu gọn' }}
             </button>
@@ -53,32 +53,36 @@ const toggleShowMore = () => {
 </script>
 
 <style scoped>
-/* Responsive Grid Layout */
-.flex > div {
-    flex: 0 0 calc(100% - 1rem); /* 1 card per row below 340px (default) */
+/* Grid Layout with Tailwind-inspired variables */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 column by default */
+    gap: var(--spacing-unit, 1rem); /* Matches gap-4 */
 }
 
+/* Responsive Grid Columns */
 @media (min-width: 320px) {
-    .flex > div {
-        flex: 0 0 calc(50% - 1rem); /* 2 cards per row from 340px to 639px */
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
     }
 }
 
 @media (min-width: 640px) {
-    .flex > div {
-        flex: 0 0 calc(33.33% - 1.2rem); /* 3 cards per row from 640px to 1023px */
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns */
+        gap: var(--spacing-unit, 1.5rem); /* Matches sm:gap-6 */
     }
 }
 
 @media (min-width: 1024px) {
-    .flex > div {
-        flex: 0 0 calc(25% - 1.5rem); /* 4 cards per row from 1024px to 1279px */
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns */
     }
 }
 
 @media (min-width: 1280px) {
-    .flex > div {
-        flex: 0 0 calc(20% - 1.5rem); /* 5 cards per row from 1280px and up */
+    .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns */
     }
 }
 </style>

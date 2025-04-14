@@ -5,6 +5,9 @@ export const contactData = {
     ctaTitle: 'Nhắn Tin Cho Soli',
     ctaSubtitle: 'Liên hệ qua Facebook hoặc gọi điện ngay!',
     facebookLink: 'https://www.facebook.com/tiemtrasoli.username',
+    tiktokLink: 'https://www.tiktok.com/@tiemtrasoli',
     facebookButtonText: 'Nhắn Tin Facebook',
-    phoneButtonText: 'Gọi +84 123 456 789'
+    email: 'haianhbg01@gmail.com',
+    phone: '0985 978 456',
+    address: '211 Nam Kỳ Khởi Nghĩa, Phường 3, TP. Vũng Tàu'
 };

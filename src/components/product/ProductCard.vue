@@ -20,7 +20,7 @@
             </h3>
             <p class="line-clamp-2 text-gray-600 text-xs sm:text-sm">{{ product.description }}</p>
             <p class="mt-2 font-bold text-teal-600 text-sm sm:text-base md:text-lg">
-                {{ product.price.toLocaleString() }} VND
+                {{ formatPriceVND(product.price) }}
             </p>
         </div>
     </div>
@@ -28,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+import { formatPriceVND } from '@/core/utils/format';
 import { defineProps, ref } from 'vue';
 
 interface Product {
@@ -42,7 +43,7 @@ const props = defineProps<{
 }>();
 
 const isActive = ref(false);
-const touchTimeout = ref<number | null>(null);
+const touchTimeout = ref<ReturnType<typeof setTimeout> | null>(null);
 
 // Add a check to prevent accessing undefined props
 if (!props.product) {

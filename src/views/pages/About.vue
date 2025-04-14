@@ -124,16 +124,19 @@
         </section>
 
         <!-- Footer Call to Action -->
-        <footer class="py-8 sm:py-10 md:py-12 px-4 bg-teal-600 text-white text-center">
+        <footer class="py-8 sm:py-10 md:py-12 px- text-white text-center">
             <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">
-                <h2 class="animate-slide-in text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-                    Khám phá Soli ngay hôm nay
+                <h2 class="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl md:text-4xl">
+                    Tham gia cùng <span class="text-emerald-600">Soli</span>
                 </h2>
+                <p class="mx-auto mb-6 max-w-xl text-sm text-slate-600 sm:text-base md:text-lg">
+                    Khám phá Soli ngay hôm nay
+                </p>
                 <a
                     :href="contactData.facebookLink"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="animate-slide-in inline-block bg-white text-teal-600 font-semibold py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg"
+                    class="rounded-full bg-emerald-600 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-emerald-700 hover:shadow-md sm:px-8 sm:py-4 sm:text-lg"
                 >
                     Tham gia cùng chúng tôi
                 </a>

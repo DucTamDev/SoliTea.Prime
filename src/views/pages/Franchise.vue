@@ -27,14 +27,16 @@
                 </h2>
                 <EstimatedCost :costs="investmentCosts" />
             </section>
+        </main>
 
-            <!-- Call to Action Section -->
-            <section class="mt-12 text-center sm:mt-16 md:mt-20">
+        <!-- Footer Call to Action -->
+        <footer class="py-8 sm:py-10 md:py-12 px- text-white text-center">
+            <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">
                 <h2 class="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl md:text-4xl">
                     Tham gia cùng <span class="text-emerald-600">Soli</span>
                 </h2>
                 <p class="mx-auto mb-6 max-w-xl text-sm text-slate-600 sm:text-base md:text-lg">
-                    Trở thành đối tác để lan tỏa hương vị trà sữa độc đáo đến mọi người!
+                    Khám phá Soli ngay hôm nay
                 </p>
                 <a
                     :href="contactData.facebookLink"
@@ -44,8 +46,8 @@
                 >
                     Tham gia cùng chúng tôi
                 </a>
-            </section>
-        </main>
+            </div>
+        </footer>
     </div>
 </template>
 

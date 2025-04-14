@@ -4,7 +4,7 @@
         <div
             v-for="(step, index) in steps"
             :key="index"
-            class="group relative animate-slide-in rounded-2xl bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+            class="group relative animate-slide-in rounded-2xl bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg shadow-md"
         >
             <div class="flex items-center gap-4">
                 <div
@@ -50,5 +50,12 @@ defineProps<{
 
 .animate-slide-in {
     animation: slideIn 0.8s ease-out;
+}
+
+/* Optional: Customize shadow if needed */
+.shadow-md {
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 </style>

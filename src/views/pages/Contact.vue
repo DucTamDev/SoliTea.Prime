@@ -39,7 +39,7 @@
                         class="flex items-center justify-center rounded-full bg-[#6b8e23] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#4d642d] md:text-base"
                     >
                         <i class="fas fa-phone-alt mr-2 text-lg"></i>
-                        {{ contactData.phoneButtonText }}
+                        Gọi {{ contactData.phone }}
                     </div>
                 </div>
             </div>

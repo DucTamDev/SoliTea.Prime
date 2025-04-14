@@ -2,19 +2,19 @@
     <div class="space-y-12 bg-gradient-to-b from-gray-50 to-white px-4 py-8 sm:py-12 md:py-16">
         <!-- Best Sellers - Trà Thơm Chất Lượng -->
         <section class="container mx-auto">
-            <SectionTitle title="Best Sellers - Trà Thơm Chất Lượng" color="teal-800" :delay="200" />
+            <SectionTitle title="Best Sellers - Trà Thơm Chất Lượng" color="text-teal-700" :delay="0" />
             <ProductList :products="topTeaBestSellers" />
         </section>
 
         <!-- Best Sellers - Trà Sữa Đậm Vị -->
         <section class="container mx-auto">
-            <SectionTitle title="Best Sellers - Trà Sữa Đậm Vị" color="teal-800" :delay="400" />
+            <SectionTitle title="Best Sellers - Trà Sữa Đậm Vị" color="text-teal-700" :delay="0" />
             <ProductList :products="topMilkTeaBestSellers" />
         </section>
 
         <!-- Menu -->
         <section class="container mx-auto">
-            <SectionTitle title="Menu" color="teal-800" :delay="200" />
+            <SectionTitle title="Menu" color="text-teal-700" :delay="0" />
             <div class="flex justify-center px-2 sm:px-4">
                 <img
                     src="@/assets/images/menu.jpg"

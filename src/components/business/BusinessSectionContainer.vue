@@ -2,7 +2,7 @@
     <div class="min-h-screen px-2 py-6 sm:px-4 sm:py-8 md:py-12">
         <hr class="my-6 border-t border-gray-200 sm:my-8" />
         <section class="mx-auto mb-8 max-w-7xl sm:mb-12">
-            <SectionTitle title="Mô hình kinh doanh" color="teal-800" :delay="200" />
+            <SectionTitle title="Mô hình kinh doanh" color="text-teal-700" :delay="200" />
             <div class="rounded-xl bg-white p-4 transition-all duration-300 sm:p-6 md:p-8">
                 <BusinessModel />
             </div>
@@ -11,7 +11,7 @@
         <hr class="my-6 border-t border-gray-200 sm:my-8" />
 
         <section class="mx-auto mb-8 max-w-4xl sm:mb-12">
-            <SectionTitle title="Chi phí dự kiến" color="teal-800" :delay="200" />
+            <SectionTitle title="Chi phí dự kiến" color="text-teal-700" :delay="200" />
             <div class="rounded-xl bg-white p-4 transition-all duration-300 sm:p-6 md:p-8">
                 <EstimatedCost />
             </div>
@@ -20,7 +20,7 @@
         <hr class="my-6 border-t border-gray-200 sm:my-8" />
 
         <section class="mx-auto mb-8 max-w-4xl sm:mb-12">
-            <SectionTitle title="Lợi nhuận 6 tháng hơn 180 triệu" color="teal-800" :delay="200" />
+            <SectionTitle title="Lợi nhuận 6 tháng hơn 180 triệu" color="text-teal-700" :delay="200" />
             <div class="rounded-xl bg-white p-4 transition-all duration-300 sm:p-6 md:p-8">
                 <ExpectedProfit />
             </div>
@@ -29,7 +29,7 @@
         <hr class="my-6 border-t border-gray-200 sm:my-8" />
 
         <section class="mx-auto mb-8 max-w-4xl sm:mb-12">
-            <SectionTitle title="Quy trình nhượng quyền" color="teal-800" :delay="200" />
+            <SectionTitle title="Quy trình nhượng quyền" color="text-teal-700" :delay="200" />
             <div class="rounded-xl bg-white p-4 transition-all duration-300 sm:p-6 md:p-8">
                 <FranchiseSteps :steps="franchiseSteps" />
             </div>
