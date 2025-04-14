@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FloatingConfigurator from '@/components/FloatingConfigurator.vue';
+import FloatingConfigurator from '@/components/configurator/FloatingConfigurator.vue';
 </script>
 
 <template>

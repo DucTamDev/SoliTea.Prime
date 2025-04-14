@@ -6,7 +6,7 @@
         <div class="mt-8 text-center" v-if="products.length > initialDisplayCount">
             <button
                 @click="toggleShowMore"
-                class="rounded-full bg-primary px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg font-semibold text-primary-contrast transition-all duration-[--transition-duration] hover:bg-surface-hover hover:text-primary focus:outline-none focus:ring focus:ring-[--focus-ring-color]"
+                class="rounded-full bg-primary px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-lg font-semibold text-primary-contrast transition-all duration-[--transition-duration]"
             >
                 {{ showMore ? 'Xem thêm' : 'Thu gọn' }}
             </button>

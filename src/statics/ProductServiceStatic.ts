@@ -54,6 +54,16 @@ export const ProductServiceStatic = {
                 isBestSeller: true
             },
             {
+                id: '1005',
+                name: 'Oolong Sữa Tươi 2',
+                description: 'Trà Oolong kết hợp với sữa tươi thanh mát.',
+                image: this.traDaoCamDau,
+                price: 42000,
+                rating: 5,
+                category: 'milk-tea',
+                isBestSeller: true
+            },
+            {
                 id: '2000',
                 name: 'Trà Đào Cam Dâu',
                 description: 'Sự kết hợp hoàn hảo giữa trà đào, cam và dâu tươi.',
@@ -99,6 +109,16 @@ export const ProductServiceStatic = {
                 description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
                 image: this.traDaoCamDau,
                 price: 52000,
+                rating: 5,
+                category: 'tea',
+                isBestSeller: true
+            },
+            {
+                id: '2005',
+                name: 'Trà Hoa Hồng 2',
+                description: 'Hương vị tinh tế từ trà hoa hồng thơm nhẹ.',
+                image: this.traDaoCamDau,
+                price: 55000,
                 rating: 5,
                 category: 'tea',
                 isBestSeller: true
