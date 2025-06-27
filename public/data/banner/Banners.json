@@ -1,0 +1,35 @@
+[
+    {
+        "id": "b1",
+        "srcSet": {
+            "375": "images/banners/banner.jpg",
+            "768": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__tablet_768x300-20250603105639.jpg",
+            "1024": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__desktop_1024x380-20250603105639.jpg",
+            "1400": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__desktop_1400x450-20250603105639.jpg",
+            "default": "images/banners/banner.jpg"
+        },
+        "alt": "Ưu đãi đặc biệt mùa hè"
+    },
+    {
+        "id": "b2",
+        "srcSet": {
+            "375": "https://s3-hcmc02.higiocloud.vn/images/2025/05/banner-mobile-375x200--20250527021812.jpg",
+            "768": "https://s3-hcmc02.higiocloud.vn/images/2025/05/banner-tablet-768x300--20250527021812.jpg",
+            "1024": "https://s3-hcmc02.higiocloud.vn/images/2025/05/banner-desktop-1024x380--20250527021812.jpg",
+            "1400": "https://s3-hcmc02.higiocloud.vn/images/2025/05/banner-desktop-1400x450--20250527021812.jpg",
+            "default": "images/banners/banner_02.jpg"
+        },
+        "alt": "Thức uống mới ra mắt"
+    },
+    {
+        "id": "b3",
+        "srcSet": {
+            "375": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__mobile_375x200-20250603105639.jpg",
+            "768": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__tablet_768x300-20250603105639.jpg",
+            "1024": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__desktop_1024x380-20250603105639.jpg",
+            "1400": "https://s3-hcmc02.higiocloud.vn/images/2025/06/__desktop_1400x450-20250603105639.jpg",
+            "default": "images/banners/banner.jpg"
+        },
+        "alt": "Khám phá hương vị của chúng tôi"
+    }
+]

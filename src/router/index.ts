@@ -1,6 +1,7 @@
-import { AppConstants } from '@/core/constants/app.constants';
-import BlankLayout from '@/layout/BlankLayout.vue';
-import MainLayout from '@/layout/MainLayout.vue';
+import { AppConstants } from '@/core/constants/app';
+import AdminLayout from '@/layouts/AdminLayout.vue';
+import BlankLayout from '@/layouts/BlankLayout.vue';
+import MainLayout from '@/layouts/MainLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -33,12 +34,6 @@ const router = createRouter({
                             name: 'Product',
                             component: () => import('@/views/pages/Product.vue'),
                             meta: { title: 'Sản Phẩm' }
-                        },
-                        {
-                            path: ':id',
-                            name: 'ProductDetail',
-                            component: () => import('@/components/product/ProductDetail.vue'),
-                            meta: { breadcrumb: 'Chi tiết Sản Phẩm' }
                         }
                     ]
                 },
@@ -50,18 +45,25 @@ const router = createRouter({
                     meta: { title: 'Nhượng quyền' }
                 },
                 {
-                    path: 'chi-nhanh',
-                    alias: 'store-branch',
-                    name: 'StoreBranches',
-                    component: () => import('@/views/pages/StoreBranches.vue'),
-                    meta: { title: 'Chi Nhánh' }
-                },
-                {
                     path: 'lien-he',
                     alias: 'contact',
                     name: 'Contact',
                     component: () => import('@/views/pages/Contact.vue'),
                     meta: { title: 'Liên hệ' }
+                }
+            ]
+        },
+        {
+            path: '',
+            name: 'AdminLayout',
+            component: AdminLayout,
+            children: [
+                {
+                    path: '',
+                    alias: ['admin', 'dashboard'],
+                    name: 'dashboard',
+                    component: () => import('@/components/dashboards/AdminSidebar.vue'),
+                    meta: { title: 'Dashboard' }
                 }
             ]
         },

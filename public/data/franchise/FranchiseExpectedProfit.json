@@ -1,0 +1,53 @@
+{
+    "FranchiseExpectedProfit": {
+        "Revenue": {
+            "Name": "Doanh thu bán hàng dự kiến",
+            "Amount": 100000000,
+            "Currency": "VND",
+            "Description": "Doanh thu bán hàng dự kiến"
+        },
+        "Costs": [
+            {
+                "Name": "Tiền nhà",
+                "Amount": 15000000,
+                "Currency": "VND",
+                "Description": "Chi phí thuê mặt bằng hàng tháng"
+            },
+            {
+                "Name": "Nguyên vật liệu",
+                "Amount": 30000000,
+                "Currency": "VND",
+                "Description": "Chi phí nguyên liệu pha chế trà sữa"
+            },
+            {
+                "Name": "Lương nhân viên",
+                "Amount": 16000000,
+                "Currency": "VND",
+                "Description": "Lương cho 2 nhân viên bán hàng"
+            },
+            {
+                "Name": "Điện nước",
+                "Amount": 4000000,
+                "Currency": "VND",
+                "Description": "Chi phí điện nước hàng tháng"
+            },
+            {
+                "Name": "Chi phí khác",
+                "Amount": 2000000,
+                "Currency": "VND",
+                "Description": "Chi phí phát sinh khác"
+            }
+        ],
+        "Profit": {
+            "Name": "Lợi nhuận hàng tháng dự kiến",
+            "Amount": 33000000,
+            "Currency": "VND",
+            "Description": "Lợi nhuận hàng tháng dự kiến"
+        }
+    },
+    "Meta": {
+        "LastUpdated": "2025-06-09T14:31:00+07:00",
+        "Currency": "VND",
+        "Language": "vi"
+    }
+}

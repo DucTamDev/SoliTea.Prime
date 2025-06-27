@@ -16,10 +16,14 @@ export const addHttpInterceptor = (http: AxiosInstance): void => {
 
 // Request Interceptor
 const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
-    const token = localStorage.getItem('ACCESS_TOKEN');
-    if (token) {
+    const token: string | null = localStorage.getItem('ACCESS_TOKEN');
+
+    if (token && token.trim() !== '') {
         config.headers.Authorization = `Bearer ${token}`;
+    } else {
+        delete config.headers.Authorization;
     }
+
     return config;
 };
 
@@ -64,11 +68,4 @@ const getErrorResponse = (status: number, data: any, statusText: string): ErrorR
         default:
             return data;
     }
-};
-
-// Function to handle 401 Unauthorized
-const handleUnauthorized = (): void => {
-    localStorage.removeItem('ACCESS_TOKEN');
-    const { protocol, hostname, port } = window.location;
-    window.location.href = `${protocol}//${hostname}:${port}/auth/login`;
 };

@@ -1,30 +1,25 @@
 <template>
     <div class="">
         <!-- Sections -->
-        <section class="section section-banner m-2 mb-5">
-            <Banner :autoplay="true" :autoplayInterval="4000" :numVisible="1" :numScroll="1"> </Banner>
+        <section class="section section-content pb-5">
+            <LandingBanner :autoplay="true" :autoplayInterval="4000" :showNavigators="true" :showIndicators="true" />
         </section>
 
         <!-- Sections Product-->
-        <section class="section section-content py-5">
-            <ProductSectionContainer />
+        <section class="section section-content pb-5">
+            <LandingFeaturedProducts />
         </section>
 
         <!-- Sections Business-->
-        <section class="section section-content py-5">
-            <BusinessSectionContainer />
+        <section class="section section-content pb-5">
+            <LandingFranchise />
         </section>
     </div>
 </template>
 
 <script setup lang="ts">
-import Banner from '@/components/banner/Banner.vue';
-import BusinessSectionContainer from '@/components/business/BusinessSectionContainer.vue';
-import ProductSectionContainer from '@/components/product/ProductSectionContainer.vue';
+import LandingBanner from '@/components/landing/LandingBanner.vue';
+import LandingFranchise from '@/components/landing/LandingFranchise.vue';
 </script>
 
-<style scoped lang="scss">
-.container {
-    margin: 0 auto;
-}
-</style>
+<style scoped lang="scss"></style>

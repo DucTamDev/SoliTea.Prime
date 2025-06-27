@@ -4,7 +4,13 @@ import axios, { type AxiosInstance, type AxiosRequestConfig, type RawAxiosReques
 class BaseService {
     private http!: AxiosInstance;
     private baseURL: string = '';
-    private headers: RawAxiosRequestHeaders = {};
+    private headers: RawAxiosRequestHeaders = {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+    };
     private config: AxiosRequestConfig = {};
 
     constructor(baseURL: string) {
@@ -34,30 +40,30 @@ class BaseService {
     }
 
     // GET request method
-    protected async get<T>(url: string, config: AxiosRequestConfig = {}): Promise<T> {
+    protected async get<TResponse>(url: string, config: AxiosRequestConfig = {}): Promise<TResponse> {
         const finalConfig = this.mergeConfig(config);
-        const response = await this.http.get<T>(url, finalConfig);
+        const response = await this.http.get<TResponse>(url, finalConfig);
         return response.data;
     }
 
     // POST request method
-    protected async post<T>(url: string, data: any, config: AxiosRequestConfig = {}): Promise<T> {
+    protected async post<TResponse>(url: string, data: any, config: AxiosRequestConfig = {}): Promise<TResponse> {
         const finalConfig = this.mergeConfig(config);
-        const response = await this.http.post<T>(url, data, finalConfig);
+        const response = await this.http.post<TResponse>(url, data, finalConfig);
         return response.data;
     }
 
     // PUT request method
-    protected async put<T>(url: string, data: any, config: AxiosRequestConfig = {}): Promise<T> {
+    protected async put<TResponse>(url: string, data: any, config: AxiosRequestConfig = {}): Promise<TResponse> {
         const finalConfig = this.mergeConfig(config);
-        const response = await this.http.put<T>(url, data, finalConfig);
+        const response = await this.http.put<TResponse>(url, data, finalConfig);
         return response.data;
     }
 
     // DELETE request method
-    protected async delete<T>(url: string, config: AxiosRequestConfig = {}): Promise<T> {
+    protected async delete<TResponse>(url: string, config: AxiosRequestConfig = {}): Promise<TResponse> {
         const finalConfig = this.mergeConfig(config);
-        const response = await this.http.delete<T>(url, finalConfig);
+        const response = await this.http.delete<TResponse>(url, finalConfig);
         return response.data;
     }
 }

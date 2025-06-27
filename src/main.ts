@@ -1,19 +1,21 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import './assets/styles/styles.scss';
 import router from './router/index';
 
-import { I18nPlugin, LoggerPlugin } from '@/core/plugins/_index';
 import DevConsole from '@/core/utils/console';
+import { I18nPlugin, LoggerPlugin } from '@/plugins/_index';
 import Aura from '@primeuix/themes/aura';
+import { createPinia } from 'pinia';
 import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 
-import '@/assets/styles.scss';
-
 DevConsole.welcome();
 
 const app = createApp(App);
+
+const pinia = createPinia();
 
 app.use(await I18nPlugin.getI18n());
 
@@ -27,6 +29,7 @@ app.use(PrimeVue, {
     }
 });
 
+app.use(pinia);
 app.use(ToastService);
 app.use(ConfirmationService);
 app.use(LoggerPlugin);
