@@ -1,144 +1,138 @@
-<!-- src/views/About.vue -->
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-teal-50 overflow-hidden">
-        <!-- Hero Section -->
-        <header class="py-8 sm:py-12 md:py-16 px-4 text-center text-white bg-gradient-to-br from-teal-400 to-teal-200">
-            <div class="container mx-auto px-4 sm:px-6 md:px-12">
+    <div class="min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
+        <header class="relative bg-teal-400 text-white py-24 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-6 text-center z-10 relative">
                 <h1
-                    class="animate-fade-in text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-wide"
                 >
-                    Soli - Hương vị trà sữa Việt
+                    Hành trình của Soli
                 </h1>
-                <p class="animate-fade-in mx-auto mt-4 max-w-2xl text-base text-teal-100 sm:mt-6 sm:text-lg md:text-xl">
-                    Mang nghệ thuật trà sữa Việt Nam đến từng khoảnh khắc của bạn
+                <p class="text-xl sm:text-2xl md:text-3xl max-w-4xl mx-auto font-light">
+                    Nơi mỗi ly trà sữa là một câu chuyện, một trải nghiệm đích thực
                 </p>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-300 to-teal-400"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1/3 bg-white opacity-10 blur-3xl"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-white opacity-5 blur-3xl rounded-full"></div>
         </header>
 
-        <!-- Introduction Section -->
-        <section class="py-16 px-4 sm:px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-8 reveal-up">1.1 Giới thiệu về Soli</h2>
-                <div
-                    class="bg-white p-6 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-all duration-500 reveal-up delay-200"
-                >
-                    <div class="flex items-center justify-center mb-4">
-                        <span class="text-3xl text-teal-500">{{ introduction[0].icon }}</span>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-semibold text-teal-600 mb-4">
-                        {{ introduction[0].title }}
+        <main class="container mx-auto px-6 py-20 md:py-28">
+            <section v-if="aboutData" class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24 md:mb-36">
+                <div class="space-y-6 text-center md:text-left">
+                    <h3 class="text-3xl font-bold text-teal-700 relative inline-block pb-3 mb-4">
+                        1.1 Giới thiệu về Soli
                     </h3>
-                    <p class="text-gray-600 text-base md:text-lg" v-html="introduction[0].description"></p>
+                    <p class="text-lg leading-relaxed text-gray-700 mt-4">
+                        {{ aboutData.Introduction.Description }}
+                    </p>
                 </div>
-            </div>
-        </section>
+                <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
+                    <img
+                        :src="getAssetUrl(aboutData.Introduction.ImageUrl)"
+                        alt="Soli Milk Tea"
+                        class="w-full h-full object-contain"
+                    />
+                </div>
+            </section>
 
-        <!-- Vision Section -->
-        <section class="py-16 px-4 sm:px-6 bg-teal-100/50">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-8 reveal-up">1.2 Tầm nhìn</h2>
+            <section v-if="aboutData" class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24 md:mb-36">
                 <div
-                    class="bg-white p-6 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-all duration-500 reveal-up delay-200"
+                    class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between"
                 >
-                    <div class="flex items-center justify-center mb-4">
-                        <span class="text-3xl text-teal-500">{{ vision[0].icon }}</span>
-                    </div>
-                    <p class="text-gray-600 text-base md:text-lg" v-html="vision[0].description"></p>
+                    <h3 class="text-3xl font-bold text-teal-700 text-center mb-6">1.2 Tầm nhìn</h3>
+                    <p class="text-lg leading-relaxed text-gray-700 text-center flex-grow">
+                        {{ aboutData.Vision.Description }}
+                    </p>
                 </div>
-            </div>
-        </section>
 
-        <!-- Mission Section -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 text-center mb-8 reveal-up">1.3 Sứ mệnh</h2>
-                <div class="bg-white p-6 rounded-2xl shadow-lg reveal-up delay-200">
-                    <p class="text-gray-600 text-base md:text-lg mb-6 leading-relaxed" v-html="mission.intro"></p>
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+                    <h3 class="text-3xl font-bold text-teal-700 text-center mb-6">1.3 Sứ mệnh</h3>
+                    <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                        Tại Soli, chúng tôi cam kết
+                        <span class="font-semibold text-teal-600">lan tỏa niềm vui</span> qua từng ly trà sữa với:
+                    </p>
                     <ul class="space-y-4">
                         <li
-                            v-for="(item, index) in mission.items"
+                            v-for="(item, index) in aboutData.Mission.Items"
                             :key="index"
-                            class="flex items-center gap-4 p-3 rounded-lg hover:bg-teal-50 transition-colors duration-300 reveal-left"
-                            :class="{ 'delay-200': index === 1, 'delay-400': index === 2 }"
+                            class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100 hover:bg-teal-50 transition-colors duration-300"
                         >
-                            <span class="text-2xl text-teal-500">{{ item.icon }}</span>
-                            <span class="text-gray-600 text-base md:text-lg">{{ item.text }}</span>
+                            <svg
+                                class="w-6 h-6 text-teal-600 flex-shrink-0 mt-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                ></path>
+                            </svg>
+                            <span class="text-base text-gray-800">{{ item.Text }}</span>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Core Values Section -->
-        <section class="py-16 px-4 sm:px-6 bg-teal-100/50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 text-center mb-8 reveal-up">
-                    1.4 Giá trị cốt lõi
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <section v-if="aboutData" class="mb-24 md:mb-36">
+                <h3 class="text-3xl font-bold text-teal-700 text-center mb-16 relative">1.4 Giá trị cốt lõi</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div
-                        v-for="(value, index) in coreValues"
+                        v-for="(value, index) in aboutData.CoreValues"
                         :key="index"
-                        class="bg-white p-6 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-all duration-500 reveal-up"
-                        :class="{ 'delay-200': index % 2 === 1 }"
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center flex flex-col justify-between items-center hover:shadow-xl transition-shadow duration-300"
                     >
-                        <div class="flex items-center justify-center mb-4">
-                            <span class="text-3xl text-teal-500">{{ value.icon }}</span>
+                        <div
+                            class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mb-6 shadow-inner"
+                        >
+                            <span class="text-4xl font-bold text-teal-600">{{ index + 1 }}</span>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-teal-600 mb-4">
-                            {{ value.title }}
+                        <h3 class="text-2xl font-bold text-teal-700 mb-3">
+                            {{ value.Title }}
                         </h3>
-                        <p class="text-gray-600 text-base md:text-lg">{{ value.description }}</p>
+                        <p class="text-base text-gray-600 flex-grow">{{ value.Description }}</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Business Areas Section -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 text-center mb-8 reveal-up">
-                    1.5 Lĩnh vực hoạt động
-                </h2>
-                <div class="space-y-6">
+            <section v-if="aboutData">
+                <h3 class="text-3xl font-bold text-teal-700 text-center mb-16 relative">1.5 Lĩnh vực hoạt động</h3>
+                <div class="space-y-12 max-w-5xl mx-auto">
                     <div
-                        v-for="(area, index) in businessAreas"
+                        v-for="(area, index) in aboutData.BusinessAreas"
                         :key="index"
-                        class="bg-white p-6 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-all duration-500 reveal-up"
-                        :class="{ 'delay-200': index % 2 === 1 }"
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-8 hover:shadow-xl transition-shadow duration-300"
                     >
-                        <div class="flex items-center gap-4">
-                            <span class="text-2xl font-bold text-teal-500">
-                                {{ String(index + 1).padStart(2, '0') }}
-                            </span>
-                            <div class="flex-1">
-                                <h3 class="text-xl md:text-2xl font-semibold text-teal-600 mb-4">
-                                    {{ area.title }}
-                                </h3>
-                                <p class="text-gray-600 text-base md:text-lg">{{ area.description }}</p>
-                            </div>
+                        <div class="flex-shrink-0 text-6xl font-extrabold text-teal-600 w-24 text-center">
+                            {{ String(index + 1).padStart(2, '0') }}
+                        </div>
+                        <div class="text-center sm:text-left flex-grow">
+                            <h3 class="text-3xl font-bold text-teal-700 mb-3">
+                                {{ area.Title }}
+                            </h3>
+                            <p class="text-lg text-gray-700">{{ area.Description }}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Footer Call to Action -->
-        <footer class="py-8 sm:py-10 md:py-12 px- text-white text-center">
-            <div class="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">
-                <h2 class="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl md:text-4xl">
-                    Tham gia cùng <span class="text-emerald-600">Soli</span>
-                </h2>
-                <p class="mx-auto mb-6 max-w-xl text-sm text-slate-600 sm:text-base md:text-lg">
-                    Khám phá Soli ngay hôm nay
+        <footer v-if="aboutData" class="bg-gradient-to-br from-teal-300 to-teal-400 text-white py-20 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-wide">Sẵn sàng trải nghiệm Soli?</h2>
+                <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10 font-light">
+                    Hãy liên hệ với chúng tôi để khám phá hương vị trà sữa độc đáo và chất lượng.
                 </p>
                 <a
-                    :href="contactData.facebookLink"
+                    :href="aboutData.ContactData.FacebookLink"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="rounded-full bg-emerald-600 px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-emerald-700 hover:shadow-md sm:px-8 sm:py-4 sm:text-lg"
+                    class="inline-block bg-teal-500 text-white font-bold text-xl py-4 px-12 rounded-full shadow-lg hover:bg-teal-600 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
-                    Tham gia cùng chúng tôi
+                    Kết nối với chúng tôi
                 </a>
             </div>
         </footer>
@@ -146,94 +140,71 @@
 </template>
 
 <script setup lang="ts">
-import { BUSINESS_AREAS, CORE_VALUES, INTRODUCTION, MISSION, VISION } from '@/statics/AboutServiceStatic';
-import { contactData } from '@/statics/ContactServiceStatic';
+import { loadJsonFile } from '@/core/services/JsonLoader'; // Import JsonLoader
+import { getAssetUrl } from '@/core/utils/assetsUrl';
+import { onMounted, ref } from 'vue';
 
-const introduction = INTRODUCTION;
-const vision = VISION;
-const mission = MISSION;
-const coreValues = CORE_VALUES;
-const businessAreas = BUSINESS_AREAS;
+// Định nghĩa các kiểu dữ liệu cho JSON (PascalCase)
+interface IntroContent {
+    Title: string;
+    Description: string;
+    ImageUrl: string;
+}
+
+interface VisionContent {
+    Description: string;
+}
+
+interface MissionItem {
+    Text: string;
+}
+
+interface MissionContent {
+    Intro: string;
+    Items: MissionItem[];
+}
+
+interface CoreValue {
+    Title: string;
+    Description: string;
+}
+
+interface BusinessArea {
+    Title: string;
+    Description: string;
+}
+
+interface ContactInfo {
+    FacebookLink: string;
+}
+
+interface AboutPageData {
+    Introduction: IntroContent;
+    Vision: VisionContent;
+    Mission: MissionContent;
+    CoreValues: CoreValue[];
+    BusinessAreas: BusinessArea[];
+    ContactData: ContactInfo;
+}
+
+// Sử dụng ref với kiểu dữ liệu AboutPageData
+const aboutData = ref<AboutPageData | null>(null);
+const DATA_ABOUT_PATH = getAssetUrl('data/about/AboutData.json');
+
+onMounted(async () => {
+    try {
+        const data = await loadJsonFile<AboutPageData>(DATA_ABOUT_PATH);
+        if (data) {
+            aboutData.value = data;
+        } else {
+            console.error('Không thể tải dữ liệu AboutData.');
+        }
+    } catch (error) {
+        console.error('Lỗi khi tải dữ liệu AboutData:', error);
+    }
+});
 </script>
 
 <style scoped lang="scss">
-/* Reveal Animations */
-@keyframes revealUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes revealLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
-}
-.reveal-up {
-    opacity: 0;
-    animation: revealUp 0.8s ease-out forwards;
-}
-
-.reveal-left {
-    opacity: 0;
-    animation: revealLeft 0.8s ease-out forwards;
-}
-
-.delay-200 {
-    animation-delay: 0.2s;
-}
-
-.delay-400 {
-    animation-delay: 0.4s;
-}
-
-/* Scroll Trigger for Animations */
-section {
-    position: relative;
-}
-
-section .reveal-up,
-section .reveal-left {
-    opacity: 0;
-}
-
-section:in-viewport .reveal-up,
-section:in-viewport .reveal-left {
-    opacity: 0;
-    animation-play-state: running;
-}
-
-/* Global Styles */
-.shadow-lg {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.rounded-2xl {
-    border-radius: 1.5rem;
-}
+/* No specific styles needed beyond TailwindCSS utilities */
 </style>

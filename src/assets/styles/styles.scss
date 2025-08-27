@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'primeicons/primeicons.css';
+@use '@/assets/tailwind.css';
+@use '@/assets/styles/variables/_common';
+@use '@/assets/styles/variables/_light';
+@use '@/assets/styles/variables/_dark';
+@use '@/assets/styles/_mixins.scss';
+@use '@/assets/styles/_core.scss';
+@use '@/assets/layout/layout.scss';

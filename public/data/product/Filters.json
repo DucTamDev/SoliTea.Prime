@@ -1,0 +1,65 @@
+{
+    "Category": {
+        "FilterName": "Danh mục",
+        "FilterType": "Radio",
+        "Options": [
+            { "Id": "cat_001", "Code": "TS_DB", "Label": "Trà Sữa Đặc Biệt", "Value": "TS_DB" },
+            { "Id": "cat_002", "Code": "TT_CC", "Label": "Trà Trái Cây", "Value": "TT_CC" },
+            { "Id": "cat_003", "Code": "MAT", "Label": "Matcha", "Value": "MAT" },
+            { "Id": "cat_004", "Code": "T_CRM", "Label": "Trà Creamy", "Value": "T_CRM" },
+            { "Id": "cat_005", "Code": "F_CFE", "Label": "Fresh & Cà Phê", "Value": "F_CFE" },
+            { "Id": "cat_006", "Code": "TOP", "Label": "Topping", "Value": "TOP" }
+        ],
+        "IsActive": true,
+        "DefaultValue": null
+    },
+    "PriceRange": {
+        "FilterName": "Khoảng giá",
+        "FilterType": "Radio",
+        "Options": [
+            { "Label": "Dưới 20.000đ", "Value": "Duoi20K", "MinPrice": 0, "MaxPrice": 20000 },
+            { "Label": "20.000đ - 30.000đ", "Value": "20K_30K", "MinPrice": 20000, "MaxPrice": 30000 },
+            { "Label": "Trên 30.000đ", "Value": "Tren30K", "MinPrice": 30001, "MaxPrice": null }
+        ],
+        "IsActive": true,
+        "DefaultValue": null
+    },
+    "MainFlavors": {
+        "FilterName": "Hương vị chính",
+        "FilterType": "Checkbox",
+        "Options": [
+            { "Label": "Có Kem", "Value": "CoKem" },
+            { "Label": "Vị Béo", "Value": "ViBeo" },
+            { "Label": "Vị Đắng", "Value": "ViDang" },
+            { "Label": "Vị Ngọt", "Value": "ViNgot" },
+            { "Label": "Vị Thanh", "Value": "ViThanh" },
+            { "Label": "Vị Trà", "Value": "ViTra" },
+            { "Label": "Vị Chua Nhẹ", "Value": "ViChuaNhe" },
+            { "Label": "Vị Hoa", "Value": "ViHoa" },
+            { "Label": "Vị Khói", "Value": "ViKhoi" }
+        ],
+        "IsActive": true,
+        "DefaultValue": []
+    },
+    "Highlights": {
+        "FilterName": "Điểm nổi bật",
+        "FilterType": "Checkbox",
+        "Options": [
+            { "Label": "Bán Chạy", "Value": "BestSeller" },
+            { "Label": "Món Truyền Thống", "Value": "MonTruyenThong" },
+            { "Label": "Sản Phẩm Nổi Bật", "Value": "SanPhamNoiBat" }
+        ],
+        "IsActive": true,
+        "DefaultValue": []
+    },
+    "Availability": {
+        "FilterName": "Trạng thái",
+        "FilterType": "Checkbox",
+        "Options": [
+            { "Label": "Có sẵn", "Value": "Available" },
+            { "Label": "Hết hàng", "Value": "OutOfStock" }
+        ],
+        "IsActive": false,
+        "DefaultValue": ["Available"]
+    }
+}

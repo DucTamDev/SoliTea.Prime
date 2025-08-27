@@ -1,0 +1,56 @@
+[
+    {
+        "Id": 1,
+        "Title": "Mô hình bền vững",
+        "Description": "Lợi nhuận ổn định từ 5-7 năm với nền tảng kinh doanh đã được kiểm chứng.",
+        "Icon": "✅"
+    },
+    {
+        "Id": 2,
+        "Title": "Vốn đầu tư thấp",
+        "Description": "Chỉ từ 150-250 triệu, giúp bạn nhanh chóng bắt đầu kinh doanh.",
+        "Icon": "💰"
+    },
+    {
+        "Id": 3,
+        "Title": "Hoàn vốn nhanh",
+        "Description": "Khả năng thu hồi vốn chỉ sau 3-6 tháng, tối ưu hóa dòng tiền.",
+        "Icon": "🚀"
+    },
+    {
+        "Id": 4,
+        "Title": "Tệp khách hàng ổn định",
+        "Description": "Sở hữu lượng khách hàng trung thành, đảm bảo nguồn doanh thu đều đặn.",
+        "Icon": "🤝"
+    },
+    {
+        "Id": 5,
+        "Title": "Vận hành tối giản",
+        "Description": "Quy trình được chuẩn hóa, giúp việc quản lý trở nên dễ dàng.",
+        "Icon": "✨"
+    },
+    {
+        "Id": 6,
+        "Title": "Sản phẩm chất lượng cao",
+        "Description": "Trà ô long thượng hạng từ nguồn nguyên liệu uy tín, tận dụng nông sản Việt.",
+        "Icon": "🍃"
+    },
+    {
+        "Id": 7,
+        "Title": "Mặt bằng linh hoạt",
+        "Description": "Không yêu cầu mặt bằng quá lớn, phù hợp với nhiều địa điểm khác nhau.",
+        "Icon": "🏠"
+    },
+    {
+        "Id": 8,
+        "Title": "Hỗ trợ chuyên nghiệp",
+        "Description": "Đội ngũ chuyên gia luôn sẵn sàng hỗ trợ bạn trong suốt quá trình kinh doanh.",
+        "Icon": "📞"
+    },
+    {
+        "Id": 9,
+        "Title": "Tỉ lệ thành công cao",
+        "Description": "Với tỉ lệ thành công đã được chứng minh lên đến 80%, rủi ro được giảm thiểu đáng kể.",
+        "Icon": "🏆"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "Id": "0f1e2d3c-4b5a-6789-0123-456789abcdef",
+        "Code": "SWEETNESS",
+        "OptionName": "Mức Đường",
+        "OptionType": "Radio",
+        "DefaultOptionValue": "NgotVua",
+        "Values": [
+            { "Value": "100Duong", "Label": "100% Đường", "Note": "Ngọt đậm đà" },
+            { "Value": "NgotVua", "Label": "70% Đường", "Note": "Ngọt vừa phải" },
+            { "Value": "NgotNhe", "Label": "50% Đường", "Note": "Ngọt nhẹ" },
+            { "Value": "KhongDuong", "Label": "Không Đường", "Note": "Giữ vị nguyên bản" }
+        ]
+    },
+    {
+        "Id": "fedcba98-7654-3210-fedc-ba9876543210",
+        "Code": "ICE",
+        "OptionName": "Mức Đá",
+        "OptionType": "Radio",
+        "DefaultOptionValue": "DayDa",
+        "Values": [
+            { "Value": "DayDa", "Label": "Đầy Đá", "Note": "Mát lạnh sảng khoái" },
+            { "Value": "ItDa", "Label": "Ít Đá", "Note": "Đậm vị hơn" },
+            { "Value": "KhongDa", "Label": "Không Đá", "Note": "Pha sẵn, uống liền" }
+        ]
+    },
+    {
+        "Id": "cba98765-4321-0fed-cba9-876543210fed",
+        "Code": "TOPPING_GROUP",
+        "OptionName": "Chọn Topping",
+        "OptionType": "Checkbox",
+        "DefaultOptionValue": null,
+        "Values": [
+            { "Value": "TCDN", "Label": "Trân Châu Đen" },
+            { "Value": "TCA", "Label": "Thạch Aiyu" },
+            { "Value": "SS", "Label": "Sương Sáo" },
+            { "Value": "TCGN", "Label": "Trân Châu Giòn" },
+            { "Value": "TCCF", "Label": "Trách Cà Phê" },
+            { "Value": "PMT", "Label": "Phô Mai Tươi" },
+            { "Value": "KC", "Label": "Kem Cheese" },
+            { "Value": "HB", "Label": "Hạt Bạc" },
+            { "Value": "VDNH", "Label": "Vải Đào/ Nấm Hạt" },
+            { "Value": "MCT", "Label": "Mãng Cầu Thịt" },
+            { "Value": "BF", "Label": "Bánh Flan" },
+            { "Value": "PMV", "Label": "Phô Mai Viên" },
+            { "Value": "FT", "Label": "Full Topping" },
+            { "Value": "KBPM", "Label": "Khúc Bạch Phô Mai" },
+            { "Value": "TCHKM", "Label": "Trân Châu Hoàng Kim" },
+            { "Value": "PDKM", "Label": "Pudding Khoai Môn" },
+            { "Value": "PDTX", "Label": "Pudding Trà Xanh" },
+            { "Value": "TCT", "Label": "Trân Châu Trắng" }
+        ]
+    }
+]

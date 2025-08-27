@@ -1,0 +1,51 @@
+[
+    {
+        "Id": 1,
+        "Index": 1,
+        "Title": "Tư vấn ban đầu",
+        "Description": "Trao đổi thông tin, mô hình kinh doanh và điều khoản để hiểu rõ và đồng thuận.",
+        "Icon": "🤝"
+    },
+    {
+        "Id": 2,
+        "Index": 2,
+        "Title": "Hợp đồng chính thức",
+        "Description": "Ký hợp đồng và thanh toán 100% phí nhượng quyền sau khi đồng ý hợp tác.",
+        "Icon": "✍️"
+    },
+    {
+        "Id": 3,
+        "Index": 3,
+        "Title": "Đào tạo cơ bản",
+        "Description": "Hỗ trợ đào tạo và tư vấn chọn địa điểm kinh doanh tối ưu.",
+        "Icon": "🎓"
+    },
+    {
+        "Id": 4,
+        "Index": 4,
+        "Title": "Thi công cửa hàng",
+        "Description": "Thiết kế và setup cửa hàng theo tiêu chuẩn Soli.",
+        "Icon": "🏗️"
+    },
+    {
+        "Id": 5,
+        "Index": 5,
+        "Title": "Đào tạo vận hành",
+        "Description": "Đào tạo tại chỗ và bán thử để làm quen với quy trình.",
+        "Icon": "📊"
+    },
+    {
+        "Id": 6,
+        "Index": 6,
+        "Title": "Khai trương",
+        "Description": "Hỗ trợ khai trương và bàn giao để bắt đầu kinh doanh.",
+        "Icon": "🎉"
+    },
+    {
+        "Id": 7,
+        "Index": 7,
+        "Title": "Hỗ trợ liên tục",
+        "Description": "Tư vấn thường xuyên và kiểm soát chất lượng để duy trì tiêu chuẩn.",
+        "Icon": "📞"
+    }
+]

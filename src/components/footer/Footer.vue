@@ -17,7 +17,7 @@
                     </p>
                     <div class="flex justify-center space-x-6 md:justify-start">
                         <a
-                            :href="contactData.facebookLink"
+                            :href="contactData?.FacebookLink"
                             target="_blank"
                             class="text-[#1877F2] transition-colors duration-300 hover:text-[#0A62D0]"
                         >
@@ -26,7 +26,7 @@
                             </span>
                         </a>
                         <a
-                            href="https://tiktok.com/tiemtrasoli"
+                            :href="contactData?.TikTokLink"
                             target="_blank"
                             class="text-[#010101] transition-colors duration-300 hover:text-[#FE2C55]"
                         >
@@ -84,19 +84,19 @@
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-envelope"></i>
                             </span>
-                            {{ contactData.email }}
+                            {{ contactData?.Email }}
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-phone"></i>
                             </span>
-                            {{ contactData.phone }}
+                            {{ contactData?.Phone }}
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <span class="inline-block text-xl text-teal-500 sm:text-2xl mr-3">
                                 <i class="pi pi-map-marker"></i>
                             </span>
-                            {{ contactData.address }}
+                            {{ contactData?.Address }}
                         </li>
                     </ul>
                 </div>
@@ -111,8 +111,16 @@
 </template>
 
 <script setup lang="ts">
+import ContactService from '@/services/ContactService';
+import type { ContactData } from '@/types/contact/contact';
+import { onMounted, ref } from 'vue';
+
 // No complex logic needed
-import { contactData } from '@/statics/ContactServiceStatic';
+const contactData = ref<ContactData | null>(null);
+
+onMounted(async () => {
+    contactData.value = await ContactService.getContactData();
+});
 </script>
 
 <style lang="scss" scoped>

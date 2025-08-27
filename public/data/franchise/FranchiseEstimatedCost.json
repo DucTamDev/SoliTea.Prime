@@ -1,0 +1,57 @@
+{
+    "FranchiseCosts": [
+        {
+            "Name": "Công cụ dụng cụ pha chế",
+            "Amount": 42000000,
+            "Currency": "VND",
+            "Description": "Máy móc và dụng cụ cần thiết để pha chế trà sữa"
+        },
+        {
+            "Name": "Biển bảng",
+            "Amount": 35000000,
+            "Currency": "VND",
+            "Description": "Biển hiệu và bảng quảng cáo ngoài cửa hàng"
+        },
+        {
+            "Name": "Quầy pha chế",
+            "Amount": 30000000,
+            "Currency": "VND",
+            "Description": "Quầy pha chế chuyên dụng cho cửa hàng"
+        },
+        {
+            "Name": "Bàn ghế",
+            "Amount": 30000000,
+            "Currency": "VND",
+            "Description": "Nội thất bàn ghế cho khách ngồi tại cửa hàng"
+        },
+        {
+            "Name": "Điện nước + camera + wifi",
+            "Amount": 15000000,
+            "Currency": "VND",
+            "Description": "Chi phí lắp đặt điện, nước, camera an ninh và wifi"
+        },
+        {
+            "Name": "Chi phí sơn sửa + decor",
+            "Amount": 15000000,
+            "Currency": "VND",
+            "Description": "Sơn sửa và trang trí không gian cửa hàng"
+        },
+        {
+            "Name": "Ô dù",
+            "Amount": 6000000,
+            "Currency": "VND",
+            "Description": "Ô dù ngoài trời cho khu vực khách ngồi"
+        },
+        {
+            "Name": "Phí nhượng quyền",
+            "Amount": 50000000,
+            "Currency": "VND",
+            "Description": "Phí đăng ký nhượng quyền thương hiệu"
+        }
+    ],
+    "Meta": {
+        "LastUpdated": "2025-06-09T14:31:00+07:00",
+        "Currency": "VND",
+        "Language": "vi"
+    }
+}

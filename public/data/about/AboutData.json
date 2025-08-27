@@ -1,0 +1,53 @@
+{
+    "Introduction": {
+        "Title": "Công ty TNHH Soli",
+        "Description": "Thành lập vào năm 2020, Soli ra đời từ ước mơ mang đến những ly trà sữa không chỉ ngon mà còn là tác phẩm nghệ thuật. Chúng tôi tự hào kết hợp trà thượng hạng từ cao nguyên Việt Nam, sữa tươi nguyên chất và topping homemade để tạo nên dấu ấn riêng biệt. Với hơn 50 chi nhánh trải dài khắp Việt Nam cùng hàng ngàn khách hàng trung thành, Soli đang từng bước khẳng định vị thế trong lòng những người yêu trà sữa qua chất lượng và sự tận tâm.",
+        "ImageUrl": "images/about/introduction.jpg"
+    },
+    "Vision": {
+        "Description": "Đến năm 2030, Soli hướng tới trở thành thương hiệu trà sữa Việt Nam có 500 chi nhánh trên toàn quốc, mang hương vị quê hương vươn xa. Mỗi ly trà sữa là một câu chuyện, một trải nghiệm đáng nhớ."
+    },
+    "Mission": {
+        "Intro": "Tại Soli, chúng tôi cam kết lan tỏa niềm vui qua từng ly trà sữa với:",
+        "Items": [
+            { "Text": "Sản phẩm chất lượng cao, an toàn và tốt cho sức khỏe" },
+            { "Text": "Cộng đồng yêu trà sữa gắn kết, chia sẻ niềm hạnh phúc" },
+            { "Text": "Quảng bá văn hóa trà Việt Nam ra thế giới" }
+        ]
+    },
+    "CoreValues": [
+        {
+            "Title": "Chất lượng",
+            "Description": "Nguyên liệu tuyển chọn từ thiên nhiên, quy trình sản xuất khép kín."
+        },
+        {
+            "Title": "Sáng tạo",
+            "Description": "Đột phá trong công thức, mang đến hương vị độc đáo."
+        },
+        {
+            "Title": "Khách hàng",
+            "Description": "Lắng nghe và phục vụ tận tâm vì nụ cười của bạn."
+        },
+        {
+            "Title": "Bền vững",
+            "Description": "Sử dụng bao bì thân thiện, bảo vệ môi trường xanh."
+        }
+    ],
+    "BusinessAreas": [
+        {
+            "Title": "Sản xuất & Phân phối",
+            "Description": "Soli chuyên cung cấp trà sữa và nguyên liệu cho hệ thống chi nhánh và đối tác nhượng quyền."
+        },
+        {
+            "Title": "Hệ thống cửa hàng",
+            "Description": "Chuỗi cửa hàng Soli phủ sóng khắp các thành phố lớn với không gian ấm cúng, hiện đại, là điểm đến yêu thích của giới trẻ."
+        },
+        {
+            "Title": "Nhượng quyền",
+            "Description": "Mô hình nhượng quyền linh hoạt, hỗ trợ đối tác khởi nghiệp với thương hiệu Soli trên toàn quốc ."
+        }
+    ],
+    "ContactData": {
+        "FacebookLink": "https://www.facebook.com/tiemtrasoli.username"
+    }
+}

@@ -1,30 +1,38 @@
 <template>
-    <div class="">
-        <!-- Sections -->
-        <section class="section section-banner m-2 mb-5">
-            <Banner :autoplay="true" :autoplayInterval="4000" :numVisible="1" :numScroll="1"> </Banner>
+    <!-- <div class="">
+
+        <section class="section section-content pb-5">
+            <LandingBanner :autoplay="true" :autoplayInterval="4000" :showNavigators="true" :showIndicators="true" />
         </section>
 
-        <!-- Sections Product-->
-        <section class="section section-content py-5">
-            <ProductSectionContainer />
+       
+        <section class="section section-content pb-5">
+            <LandingFeaturedProducts />
         </section>
 
-        <!-- Sections Business-->
-        <section class="section section-content py-5">
-            <BusinessSectionContainer />
+       
+        <section class="section section-content pb-5">
+            <LandingFranchise />
         </section>
+    </div> -->
+
+    <div v-for="(path, index) in source" :key="index">
+        <img :src="getAssetUrl(path)" alt="Welcome page" class="w-full" />
     </div>
 </template>
 
 <script setup lang="ts">
-import Banner from '@/components/banner/Banner.vue';
-import BusinessSectionContainer from '@/components/business/BusinessSectionContainer.vue';
-import ProductSectionContainer from '@/components/product/ProductSectionContainer.vue';
+import { getAssetUrl } from '@/core/utils/assetsUrl';
+import { onMounted, ref } from 'vue';
+
+const TOTAL_PAGES = 17;
+const source = ref<string[]>([]);
+
+const fetchHomePage = () => {
+    source.value = Array.from({ length: TOTAL_PAGES }, (_, i) => `images/welcome/page-${i + 1}.jpg`);
+};
+
+onMounted(fetchHomePage);
 </script>
 
-<style scoped lang="scss">
-.container {
-    margin: 0 auto;
-}
-</style>
+<style scoped></style>

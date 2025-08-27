@@ -1,0 +1,1787 @@
+[
+    {
+        "Id": "2c9d0a1b-4f5e-6d7c-8b9a-0e1f2c3d4b5a",
+        "Code": "OLONG_HANH_NHAN",
+        "ProductCode": "OHN_002",
+        "ProductName": "Olong Hạnh Nhân",
+        "Slug": "olong-hanh-nhan",
+        "Tagline": "Trà oolong với hạnh nhân béo ngậy",
+        "Description": "Trà oolong thượng hạng kết hợp hạnh nhân thơm béo.",
+        "ShortDescription": "Olong với hạnh nhân",
+        "BaseImageUrl": "images/products/olong_hanh_nhan.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều trước khi uống"],
+        "PairingSuggestions": ["Bánh hạnh nhân"],
+        "Benefits": ["Thư giãn", "Năng lượng"],
+        "StorySnippet": "Hương vị hạnh nhân tự nhiên",
+        "IsAvailable": true
+    },
+    {
+        "Id": "3d0e1b2c-5f6e-7d8c-9b0a-1e2f3c4d5b6a",
+        "Code": "OLONG_XANH",
+        "ProductCode": "OX_003",
+        "ProductName": "Olong Xanh",
+        "Slug": "olong-xanh",
+        "Tagline": "Trà oolong xanh thanh mát",
+        "Description": "Trà oolong xanh với vị thanh mát tự nhiên.",
+        "ShortDescription": "Olong xanh tươi mát",
+        "BaseImageUrl": "images/products/olong_xanh.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViThanh"],
+        "SweetnessLevel": "KhongNgot",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống ngay khi tươi"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Trà xanh truyền thống",
+        "IsAvailable": true
+    },
+    {
+        "Id": "4e1f2c3d-6f7e-8d9c-0b1a-2e3f4c5d6b7a",
+        "Code": "OLONG_SUA_DUA",
+        "ProductCode": "OSD_004",
+        "ProductName": "Olong Sữa Dừa",
+        "Slug": "olong-sua-dua",
+        "Tagline": "Trà oolong với sữa dừa béo ngậy",
+        "Description": "Trà oolong thượng hạng hòa quyện sữa dừa thơm béo, mang lại hương vị thanh mát nhưng vẫn đậm đà.",
+        "ShortDescription": "Olong sữa dừa",
+        "BaseImageUrl": "images/products/olong_sua_dua.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều trước khi uống"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Kết hợp sáng tạo giữa vị trà oolong và sữa dừa",
+        "IsAvailable": true
+    },
+    {
+        "Id": "5f2e3d4c-7f8e-9d0c-1b2a-3e4f5c6d7b8a",
+        "Code": "OLONG_SUA",
+        "ProductCode": "OS_005",
+        "ProductName": "Olong Sữa",
+        "Slug": "olong-sua",
+        "Tagline": "Trà oolong với sữa tươi",
+        "Description": "Trà oolong thượng hạng kết hợp sữa tươi béo ngậy.",
+        "ShortDescription": "Olong với sữa",
+        "BaseImageUrl": "images/products/olong_sua.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": true,
+        "Highlights": ["BestSeller", "MonTruyenThong", "SanPhamNoiBat"],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều trước khi uống"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Kết hợp mới lạ",
+        "IsAvailable": true
+    },
+    {
+        "Id": "6f3e4d5c-8f9e-0d1c-2b3a-4e5f6c7d8b9a",
+        "Code": "OLONG_HAT_PHI",
+        "ProductCode": "OHP_006",
+        "ProductName": "Olong Hạt Phỉ",
+        "Slug": "olong-hat-phi",
+        "Tagline": "Trà oolong hạt phỉ thơm béo",
+        "Description": "Trà oolong thượng hạng kết hợp hạt phỉ rang, mang đến hương vị béo ngậy và thơm dịu.",
+        "ShortDescription": "Olong hạt phỉ",
+        "BaseImageUrl": "images/products/olong_hat_phi.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp", "Khuấy đều trước khi uống"],
+        "PairingSuggestions": ["Bánh quy", "Bánh hạt phỉ"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương vị oolong hòa quyện với hạt phỉ rang thơm béo",
+        "IsAvailable": true
+    },
+    {
+        "Id": "7f4e5d6c-9f0e-1d2c-3b4a-5e6f7c8d9b0a",
+        "Code": "TAM_GAO",
+        "ProductCode": "TG_007",
+        "ProductName": "Tấm Gạo",
+        "Slug": "tam-gao",
+        "Tagline": "Trà sữa tấm gạo thanh mát",
+        "Description": "Trà sữa kết hợp tấm gạo rang, mang đến vị béo nhẹ và hậu vị thơm mộc mạc.",
+        "ShortDescription": "Trà sữa tấm gạo",
+        "BaseImageUrl": "images/products/tam_gao.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViNgot", "ViBeo"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 19000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "19K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 19000,
+                    "Currency": "VND",
+                    "Display": "19K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều trước khi dùng"],
+        "PairingSuggestions": ["Bánh gạo", "Snack lúa mạch"],
+        "Benefits": ["Giải khát", "Bổ sung năng lượng"],
+        "StorySnippet": "Trà sữa kết hợp hương gạo rang tự nhiên, tạo cảm giác thân quen",
+        "IsAvailable": true
+    },
+    {
+        "Id": "8g5f6d7e-0a1b-2d3c-4b5a-6e7f8c9d0b1a",
+        "Code": "KHOI_BLAO",
+        "ProductCode": "KL_008",
+        "ProductName": "Khói B'Lao",
+        "Slug": "khoi-blao",
+        "Tagline": "Trà sữa khói B'Lao độc đáo",
+        "Description": "Trà sữa với hương khói B'Lao đặc trưng, mang đến trải nghiệm vị giác mới lạ.",
+        "ShortDescription": "Khói B'Lao",
+        "BaseImageUrl": "images/products/khoi_blao.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViKhoi"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 19000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "19K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 19000,
+                    "Currency": "VND",
+                    "Display": "19K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống ngay"],
+        "PairingSuggestions": ["Bánh mặn"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương khói B'Lao độc đáo hòa quyện trong ly trà sữa",
+        "IsAvailable": true
+    },
+    {
+        "Id": "9h6g7e8f-1b2c-3d4e-5b6a-7e8f9c0d1b2a",
+        "Code": "NGUYEN_LA_U",
+        "ProductCode": "NLU_009",
+        "ProductName": "Nguyên Lá Ủ",
+        "Slug": "nguyen-la-u",
+        "Tagline": "Trà sữa nguyên lá ủ đậm vị",
+        "Description": "Trà sữa nguyên lá ủ kỹ, giữ trọn hương vị đậm đà và hậu vị thanh.",
+        "ShortDescription": "Nguyên lá ủ",
+        "BaseImageUrl": "images/products/nguyen_la_u.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViDang"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 19000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "19K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 19000,
+                    "Currency": "VND",
+                    "Display": "19K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Khuấy đều trước khi uống"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Tỉnh táo"],
+        "StorySnippet": "Trà sữa nguyên lá ủ kỹ, mang hương vị truyền thống thuần khiết",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ah7h8i9j-2c3d-4e5f-6b7a-8e9f0c1d2b3a",
+        "Code": "PHUC_LONG",
+        "ProductCode": "PL_010",
+        "ProductName": "Phúc Long",
+        "Slug": "phuc-long",
+        "Tagline": "Trà sữa Phúc Long đậm vị",
+        "Description": "Trà sữa Phúc Long với hương vị đặc trưng.",
+        "ShortDescription": "Phúc Long",
+        "BaseImageUrl": "images/products/phuc_long.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViDang"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": true,
+        "Highlights": ["BestSeller", "MonTruyenThong", "SanPhamNoiBat"],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Pha kỹ"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Tỉnh táo"],
+        "StorySnippet": "Thương hiệu Phúc Long",
+        "IsAvailable": true
+    },
+    {
+        "Id": "bi8i9j0k-3d4e-5f6g-7b8a-9e0f1c2d3b4a",
+        "Code": "HANH_NHAN_NGUYEN_LA",
+        "ProductCode": "HNNL_011",
+        "ProductName": "Hạnh Nhân Nguyên Lá",
+        "Slug": "hanh-nhan-nguyen-la",
+        "Tagline": "Trà sữa hạnh nhân nguyên lá",
+        "Description": "Trà sữa với hạnh nhân và lá trà nguyên chất.",
+        "ShortDescription": "Hạnh nhân nguyên lá",
+        "BaseImageUrl": "images/products/hanh_nhan_nguyen_la.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều"],
+        "PairingSuggestions": ["Bánh hạnh nhân"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Kết hợp tự nhiên",
+        "IsAvailable": true
+    },
+    {
+        "Id": "cj9j0k1l-4e5f-6g7h-8b9a-0e1f2c3d4b5a",
+        "Code": "OLONG_NHAI_SUA",
+        "ProductCode": "ONS_012",
+        "ProductName": "Olong Nhài Sữa",
+        "Slug": "olong-nhai-sua",
+        "Tagline": "Trà olong nhài với sữa",
+        "Description": "Trà olong nhài kết hợp sữa tươi.",
+        "ShortDescription": "Olong nhài sữa",
+        "BaseImageUrl": "images/products/olong_nhai_sua.jpg",
+        "GalleryImages": [],
+        "Category": ["TS_DB"],
+        "MainFlavors": ["ViTra", "ViHoa", "ViBeo"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống khi ấm"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương nhài tự nhiên",
+        "IsAvailable": true
+    },
+    {
+        "Id": "dk0k1l2m-5f6g-7h8i-9b0a-1e2f3c4d5b6a",
+        "Code": "MATCHA_OKINAWA",
+        "ProductCode": "MO_013",
+        "ProductName": "Matcha Okinawa",
+        "Slug": "matcha-okinawa",
+        "Tagline": "Matcha Nhật Okinawa",
+        "Description": "Matcha Okinawa với hương vị đặc trưng Nhật Bản.",
+        "ShortDescription": "Matcha Okinawa",
+        "BaseImageUrl": "images/products/matcha_okinawa.jpg",
+        "GalleryImages": [],
+        "Category": ["MAT"],
+        "MainFlavors": ["ViTra", "ViDang"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 19000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "19K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 19000,
+                    "Currency": "VND",
+                    "Display": "19K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Khuấy đều"],
+        "PairingSuggestions": ["Bánh mochi"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Matcha từ Okinawa",
+        "IsAvailable": true
+    },
+    {
+        "Id": "el1l2m3n-6g7h-8i9j-0b1a-2e3f4c5d6b7a",
+        "Code": "VAI_LAI_SEN_OLONG",
+        "ProductCode": "VLSO_014",
+        "ProductName": "Vải Lại Sen/Olong",
+        "Slug": "vai-lai-sen-olong",
+        "Tagline": "Trà vải sen với olong",
+        "Description": "Trà vải sen kết hợp olong thanh mát.",
+        "ShortDescription": "Vải sen olong",
+        "BaseImageUrl": "images/products/vai_lai_sen_olong.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViTra", "ViChuaNhe"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 28000,
+            "MaxAmount": 30000,
+            "Currency": "VND",
+            "Display": "28K - 30K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 30000,
+                    "Currency": "VND",
+                    "Display": "30K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Kết hợp vải và sen",
+        "IsAvailable": true
+    },
+    {
+        "Id": "fm2m3n4o-7h8i-9j0k-1b2a-3e4f5c6d7b8a",
+        "Code": "LAI_DAC_THOM",
+        "ProductCode": "LDT_015",
+        "ProductName": "Lài Đác Thơm",
+        "Slug": "lai-dac-thom",
+        "Tagline": "Trà lài đác thơm mát",
+        "Description": "Trà lài hoa nhài kết hợp hột đác giòn thơm, mang đến cảm giác thanh mát tự nhiên.",
+        "ShortDescription": "Lài đác thơm",
+        "BaseImageUrl": "images/products/lai_dac_thom.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViTra", "ViHoa"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 28000,
+            "MaxAmount": 30000,
+            "Currency": "VND",
+            "Display": "28K - 30K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 30000,
+                    "Currency": "VND",
+                    "Display": "30K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Bánh quy"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương vị lái nhài quyện cùng hột đác thơm giòn",
+        "IsAvailable": true
+    },
+    {
+        "Id": "gn3n4o5p-8i9j-0k1l-2b3a-4e5f6c7d8b9a",
+        "Code": "DAO_CAM_DAU",
+        "ProductCode": "DCD_016",
+        "ProductName": "Đào Cam Dâu",
+        "Slug": "dao-cam-dau",
+        "Tagline": "Trà đào cam dâu tươi mát",
+        "Description": "Trà đào kết hợp cam và dâu, mang vị chua ngọt tự nhiên, giải nhiệt sảng khoái.",
+        "ShortDescription": "Đào cam dâu",
+        "BaseImageUrl": "images/products/dao_cam_dau.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViChuaNhe", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 28000,
+            "MaxAmount": 30000,
+            "Currency": "VND",
+            "Display": "28K - 30K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 30000,
+                    "Currency": "VND",
+                    "Display": "30K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Sự hòa quyện độc đáo của đào, cam và dâu",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ho4o5p6q-9j0k-1l2m-3b4a-5e6f7c8d9b0a",
+        "Code": "SEN_LONG_NHAN",
+        "ProductCode": "SLN_017",
+        "ProductName": "Sen Long Nhãn",
+        "Slug": "sen-long-nhan",
+        "Tagline": "Trà sen long nhãn",
+        "Description": "Trà sen kết hợp long nhãn thanh mát.",
+        "ShortDescription": "Sen long nhãn",
+        "BaseImageUrl": "images/products/sen_long_nhan.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViTra", "ViNgot"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 28000,
+            "MaxAmount": 30000,
+            "Currency": "VND",
+            "Display": "28K - 30K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 30000,
+                    "Currency": "VND",
+                    "Display": "30K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương vị sen và nhãn",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ip5p6q7r-0k1l-2m3n-4b5a-6e7f8c9d0b1a",
+        "Code": "LUCKY_TEA",
+        "ProductCode": "LT_018",
+        "ProductName": "Luckytea",
+        "Slug": "luckytea",
+        "Tagline": "Trà trái cây Lucky",
+        "Description": "Trà trái cây với hương vị tươi mới.",
+        "ShortDescription": "Luckytea",
+        "BaseImageUrl": "images/products/luckytea.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViChuaNhe", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 26000,
+            "MaxAmount": 28000,
+            "Currency": "VND",
+            "Display": "26K - 28K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 26000,
+                    "Currency": "VND",
+                    "Display": "26K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Trà trái cây nổi tiếng",
+        "IsAvailable": true
+    },
+    {
+        "Id": "jq6q7r8s-1l2m-3n4o-5b6a-7e8f9c0d1b2a",
+        "Code": "THANH_TRA_PHUC_BON_TU",
+        "ProductCode": "TTPBT_019",
+        "ProductName": "Thanh Trà Phúc Bồn Tử",
+        "Slug": "thanh-tra-phuc-bon-tu",
+        "Tagline": "Trà thanh mát phúc bồn tử",
+        "Description": "Trà với phúc bồn tử tươi ngon.",
+        "ShortDescription": "Phúc bồn tử",
+        "BaseImageUrl": "images/products/thanh_tra_phuc_bon_tu.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViThanh", "ViChuaNhe"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 26000,
+            "MaxAmount": 28000,
+            "Currency": "VND",
+            "Display": "26K - 28K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 26000,
+                    "Currency": "VND",
+                    "Display": "26K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Bánh quy"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Trà với phúc bồn tử",
+        "IsAvailable": true
+    },
+    {
+        "Id": "kr7r8s9t-2m3n-4o5p-6b7a-8e9f0c1d2b3a",
+        "Code": "VAI_DAM_AIYUU",
+        "ProductCode": "VDA_020",
+        "ProductName": "Vải Dằm Aiyuu",
+        "Slug": "vai-dam-aiyuu",
+        "Tagline": "Trà vải dằm aiyuu",
+        "Description": "Trà vải dằm kết hợp aiyuu thanh mát.",
+        "ShortDescription": "Vải dằm aiyuu",
+        "BaseImageUrl": "images/products/default.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViChuaNhe", "ViNgot"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 26000,
+            "MaxAmount": 28000,
+            "Currency": "VND",
+            "Display": "26K - 28K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 26000,
+                    "Currency": "VND",
+                    "Display": "26K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Kết hợp vải và aiyuu",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ls8s9t0u-3n4o-5p6q-7b8a-9e0f1c2d3b4a",
+        "Code": "OLONG_MANG_CAU",
+        "ProductCode": "OMC_021",
+        "ProductName": "Olong Mãng Cầu",
+        "Slug": "olong-mang-cau",
+        "Tagline": "Trà olong mãng cầu",
+        "Description": "Trà olong với mãng cầu thơm ngon.",
+        "ShortDescription": "Olong mãng cầu",
+        "BaseImageUrl": "images/products/default.jpg",
+        "GalleryImages": [],
+        "Category": ["TT_CC"],
+        "MainFlavors": ["ViTra", "ViNgot"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 26000,
+            "MaxAmount": 28000,
+            "Currency": "VND",
+            "Display": "26K - 28K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 26000,
+                    "Currency": "VND",
+                    "Display": "26K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 28000,
+                    "Currency": "VND",
+                    "Display": "28K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Hương vị mãng cầu",
+        "IsAvailable": true
+    },
+    {
+        "Id": "mt9t0u1v-4o5p-6q7r-8b9a-0e1f2c3d4b5a",
+        "Code": "MATCHA_LATTE",
+        "ProductCode": "ML_022",
+        "ProductName": "Matcha Latte",
+        "Slug": "matcha-latte",
+        "Tagline": "Matcha latte thượng hạng",
+        "Description": "Matcha Nhật kết hợp sữa tươi.",
+        "ShortDescription": "Matcha latte",
+        "BaseImageUrl": "images/products/matcha_latte.jpg",
+        "GalleryImages": [],
+        "Category": ["MAT"],
+        "MainFlavors": ["ViTra", "ViBeo"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": true,
+        "Highlights": ["BestSeller", "MonTruyenThong", "SanPhamNoiBat"],
+        "PriceRange": {
+            "MinAmount": 29000,
+            "MaxAmount": 33000,
+            "Currency": "VND",
+            "Display": "29K - 33K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 29000,
+                    "Currency": "VND",
+                    "Display": "29K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 33000,
+                    "Currency": "VND",
+                    "Display": "33K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Khuấy đều", "Uống ấm"],
+        "PairingSuggestions": ["Bánh mochi"],
+        "Benefits": ["Năng lượng", "Chống oxy hóa"],
+        "StorySnippet": "Matcha Nhật truyền thống",
+        "IsAvailable": true
+    },
+    {
+        "Id": "nu0u1v2w-5p6q-7r8s-9b0a-1e2f3c4d5b6a",
+        "Code": "MATCHA_LATTE_KEM_CHEESE",
+        "ProductCode": "MLKC_023",
+        "ProductName": "Matcha Latte Kem Cheese",
+        "Slug": "matcha-latte-kem-cheese",
+        "Tagline": "Matcha latte với kem cheese",
+        "Description": "Matcha latte thượng hạng với kem cheese béo ngậy.",
+        "ShortDescription": "Matcha latte kem cheese",
+        "BaseImageUrl": "images/products/matcha_latte_kem_cheese.jpg",
+        "GalleryImages": [],
+        "Category": ["MAT"],
+        "MainFlavors": ["ViTra", "ViBeo", "CoKem"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": true,
+        "Highlights": ["BestSeller", "MonTruyenThong", "SanPhamNoiBat"],
+        "PriceRange": {
+            "MinAmount": 33000,
+            "MaxAmount": 37000,
+            "Currency": "VND",
+            "Display": "33K - 37K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 33000,
+                    "Currency": "VND",
+                    "Display": "33K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 37000,
+                    "Currency": "VND",
+                    "Display": "37K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp"],
+        "PairingSuggestions": ["Bánh cheesecake"],
+        "Benefits": ["Năng lượng", "Protein"],
+        "StorySnippet": "Kết hợp Đông Tây",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ov1v2w3x-6q7r-8s9t-0b1a-2e3f4c5d6b7a",
+        "Code": "MATCHA_XOAI_YEN_MACH",
+        "ProductCode": "MXYM_024",
+        "ProductName": "Matcha Xoài Yến Mạch",
+        "Slug": "matcha-xoai-yen-mach",
+        "Tagline": "Matcha xoài với yến mạch",
+        "Description": "Matcha xoài thượng hạng kết hợp yến mạch dinh dưỡng.",
+        "ShortDescription": "Matcha xoài yến mạch",
+        "BaseImageUrl": "images/products/matcha_xoai_yen_mach.jpg",
+        "GalleryImages": [],
+        "Category": ["MAT"],
+        "MainFlavors": ["ViTra", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 37000,
+            "MaxAmount": 40000,
+            "Currency": "VND",
+            "Display": "37K - 40K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 37000,
+                    "Currency": "VND",
+                    "Display": "37K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 40000,
+                    "Currency": "VND",
+                    "Display": "40K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống ngay"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Hương vị xoài và matcha",
+        "IsAvailable": true
+    },
+    {
+        "Id": "pw2w3x4y-7r8s-9t0u-1b2a-3e4f5c6d7b8a",
+        "Code": "MATCHA_YEN_MACH_KEM_CHEESE",
+        "ProductCode": "MYMKC_025",
+        "ProductName": "Matcha Yến Mạch Kem Cheese",
+        "Slug": "matcha-yen-mach-kem-cheese",
+        "Tagline": "Matcha yến mạch với kem cheese",
+        "Description": "Matcha yến mạch thượng hạng kết hợp kem cheese.",
+        "ShortDescription": "Matcha yến mạch kem cheese",
+        "BaseImageUrl": "images/products/default.jpg",
+        "GalleryImages": [],
+        "Category": ["MAT"],
+        "MainFlavors": ["ViTra", "ViBeo", "CoKem"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 31000,
+            "MaxAmount": 35000,
+            "Currency": "VND",
+            "Display": "31K - 35K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 31000,
+                    "Currency": "VND",
+                    "Display": "31K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 35000,
+                    "Currency": "VND",
+                    "Display": "35K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Khuấy đều"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Kết hợp yến mạch và matcha",
+        "IsAvailable": true
+    },
+    {
+        "Id": "qx3x4y5z-8s9t-0u1v-2b3a-4e5f6c7d8b9a",
+        "Code": "OLONG_KEM_PHO_MAI",
+        "ProductCode": "OKPM_026",
+        "ProductName": "Olong Kem Phô Mai",
+        "Slug": "olong-kem-pho-mai",
+        "Tagline": "Trà olong với kem phô mai",
+        "Description": "Trà olong thượng hạng với kem phô mai béo ngậy.",
+        "ShortDescription": "Olong kem phô mai",
+        "BaseImageUrl": "images/products/olong_kem_pho_mai.jpg",
+        "GalleryImages": [],
+        "Category": ["T_CRM"],
+        "MainFlavors": ["ViTra", "ViBeo", "CoKem"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 25000,
+            "MaxAmount": 27000,
+            "Currency": "VND",
+            "Display": "25K - 27K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 27000,
+                    "Currency": "VND",
+                    "Display": "27K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Trà creamy phong cách",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ry4y5z6a-9t0u-1v2w-3b4a-5e6f7c8d9b0a",
+        "Code": "OLONG_RANG_KEM_PHO_MAI",
+        "ProductCode": "ORKPM_027",
+        "ProductName": "Olong Rang Kem Phô Mai",
+        "Slug": "olong-rang-kem-pho-mai",
+        "Tagline": "Trà olong rang với kem phô mai",
+        "Description": "Trà olong rang kết hợp kem phô mai béo ngậy.",
+        "ShortDescription": "Olong rang kem phô mai",
+        "BaseImageUrl": "images/products/olong_rang_kem_pho_mai.jpg",
+        "GalleryImages": [],
+        "Category": ["T_CRM"],
+        "MainFlavors": ["ViTra", "ViDang", "CoKem"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 25000,
+            "MaxAmount": 27000,
+            "Currency": "VND",
+            "Display": "25K - 27K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 27000,
+                    "Currency": "VND",
+                    "Display": "27K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp"],
+        "PairingSuggestions": ["Bánh mặn"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Trà rang creamy",
+        "IsAvailable": true
+    },
+    {
+        "Id": "sz5z6a7b-0u1v-2w3x-4b5a-6e7f8c9d0b1a",
+        "Code": "GẠO SEN_KEM_PHO_MAI",
+        "ProductCode": "GSKPM_028",
+        "ProductName": "Gạo Sen Kem Phô Mai",
+        "Slug": "gạo-sen-kem-pho-mai",
+        "Tagline": "Trà gạo sen với kem phô mai",
+        "Description": "Trà gạo sen thượng hạng với kem phô mai béo ngậy.",
+        "ShortDescription": "Gạo sen kem phô mai",
+        "BaseImageUrl": "images/products/gao_sen_kem_pho_mai.jpg",
+        "GalleryImages": [],
+        "Category": ["T_CRM"],
+        "MainFlavors": ["ViTra", "ViHoa", "CoKem"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 27000,
+            "MaxAmount": 29000,
+            "Currency": "VND",
+            "Display": "27K - 29K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 27000,
+                    "Currency": "VND",
+                    "Display": "27K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 29000,
+                    "Currency": "VND",
+                    "Display": "29K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Thư giãn"],
+        "StorySnippet": "Hương sen creamy",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ta6a7b8c-1v2w-3x4y-5b6a-7e8f9c0d1b2a",
+        "Code": "TRA_XOAI_MACCHIATO",
+        "ProductCode": "TXM_029",
+        "ProductName": "Trà Xoài Macchiato",
+        "Slug": "tra-xoai-macchiato",
+        "Tagline": "Trà xoài macchiato",
+        "Description": "Trà xoài với phong cách macchiato béo ngậy.",
+        "ShortDescription": "Xoài macchiato",
+        "BaseImageUrl": "images/products/tra_xoai_macchiato.jpg",
+        "GalleryImages": [],
+        "Category": ["T_CRM"],
+        "MainFlavors": ["ViNgot", "ViBeo"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 27000,
+            "MaxAmount": 29000,
+            "Currency": "VND",
+            "Display": "27K - 29K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 27000,
+                    "Currency": "VND",
+                    "Display": "27K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 29000,
+                    "Currency": "VND",
+                    "Display": "29K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống ngay"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Macchiato xoài độc đáo",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ub7b8c9d-2w3x-4y5z-6b7a-8e9f0c1d2b3a",
+        "Code": "SUA_TUOI_TRAN_CHAU",
+        "ProductCode": "STTC_030",
+        "ProductName": "Sữa Tươi Trân Châu",
+        "Slug": "sua-tuoi-tran-chau",
+        "Tagline": "Sữa tươi với trân châu",
+        "Description": "Sữa tươi béo ngậy kết hợp trân châu đường đen.",
+        "ShortDescription": "Sữa tươi trân châu",
+        "BaseImageUrl": "images/products/sua_tuoi_tran_chau.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViBeo", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": true,
+        "Highlights": ["BestSeller"],
+        "PriceRange": {
+            "MinAmount": 22000,
+            "MaxAmount": 25000,
+            "Currency": "VND",
+            "Display": "22K - 25K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            }
+        ],
+        "AvailableToppings": ["tran_chau_den"],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều", "Dùng ống hút lớn"],
+        "PairingSuggestions": ["Bánh flan"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Thức uống Đài Loan",
+        "IsAvailable": true
+    },
+    {
+        "Id": "vc8c9d0e-3x4y-5z6a-7b8a-9e0f1c2d3b4a",
+        "Code": "TRA_BI_DAO_SUONG_SAO",
+        "ProductCode": "TBDS_031",
+        "ProductName": "Trà Bí Đao Sương Sáo",
+        "Slug": "tra-bi-dao-suong-sao",
+        "Tagline": "Trà bí đao sương sáo",
+        "Description": "Trà bí đao thanh mát với sương sáo.",
+        "ShortDescription": "Bí đao sương sáo",
+        "BaseImageUrl": "images/products/tra_bi_dao_suong_sao.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViThanh", "ViNgot"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 19000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "19K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 19000,
+                    "Currency": "VND",
+                    "Display": "19K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": ["suong_sao"],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống lạnh"],
+        "PairingSuggestions": ["Trái cây"],
+        "Benefits": ["Giải nhiệt"],
+        "StorySnippet": "Trà bí đao truyền thống",
+        "IsAvailable": true
+    },
+    {
+        "Id": "wd9d0e1f-4y5z-6a7b-8b9a-0e1f2c3d4b5a",
+        "Code": "SUA_DUA_SUONG_SAO",
+        "ProductCode": "SDDS_032",
+        "ProductName": "Sữa Dừa Sương Sáo",
+        "Slug": "sua-dua-suong-sao",
+        "Tagline": "Sữa dừa với sương sáo",
+        "Description": "Sữa dừa béo ngậy kết hợp sương sáo.",
+        "ShortDescription": "Sữa dừa với sương sáo",
+        "BaseImageUrl": "images/products/sua_dua_suong_sao.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViBeo", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 25000,
+            "MaxAmount": 29000,
+            "Currency": "VND",
+            "Display": "25K - 29K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 29000,
+                    "Currency": "VND",
+                    "Display": "29K"
+                }
+            }
+        ],
+        "AvailableToppings": ["suong_sao"],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều"],
+        "PairingSuggestions": ["Bánh ngọt"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Sữa Tươi tự nhiên",
+        "IsAvailable": true
+    },
+    {
+        "Id": "xe0e1f2g-5z6a-7b8c-9b0a-1e2f3c4d5b6a",
+        "Code": "PHINDI_HANH_NHAN",
+        "ProductCode": "PHN_033",
+        "ProductName": "Phindi Hạnh Nhân",
+        "Slug": "phindi-hanh-nhan",
+        "Tagline": "Phindi với hạnh nhân",
+        "Description": "Phindi kết hợp hạnh nhân béo ngậy.",
+        "ShortDescription": "Phindi hạnh nhân",
+        "BaseImageUrl": "images/products/phindi_hanh_nhan.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViBeo", "ViNgot"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 25000,
+            "MaxAmount": 29000,
+            "Currency": "VND",
+            "Display": "25K - 29K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "500ml",
+                "BasePrice": {
+                    "Amount": 25000,
+                    "Currency": "VND",
+                    "Display": "25K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "700ml",
+                "BasePrice": {
+                    "Amount": 29000,
+                    "Currency": "VND",
+                    "Display": "29K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Lắc đều"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Năng lượng"],
+        "StorySnippet": "Hương vị hạnh nhân",
+        "IsAvailable": true
+    },
+    {
+        "Id": "yf1f2g3h-6a7b-8c9d-0b1a-2e3f4c5d6b7a",
+        "Code": "CA_PHE_DEN",
+        "ProductCode": "CPD_034",
+        "ProductName": "Cà Phê Đen",
+        "Slug": "ca-phe-den",
+        "Tagline": "Cà phê đen truyền thống",
+        "Description": "Cà phê đen đậm đà Việt Nam.",
+        "ShortDescription": "Cà phê đen",
+        "BaseImageUrl": "images/products/ca_phe_den.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViDang"],
+        "SweetnessLevel": "KhongNgot",
+        "IsFeatured": true,
+        "Highlights": ["MonTruyenThong"],
+        "PriceRange": {
+            "MinAmount": 15000,
+            "MaxAmount": 18000,
+            "Currency": "VND",
+            "Display": "15K - 18K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "300ml",
+                "BasePrice": {
+                    "Amount": 15000,
+                    "Currency": "VND",
+                    "Display": "15K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "400ml",
+                "BasePrice": {
+                    "Amount": 18000,
+                    "Currency": "VND",
+                    "Display": "18K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống nóng hoặc lạnh"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Tỉnh táo"],
+        "StorySnippet": "Cà phê Việt Nam",
+        "IsAvailable": true
+    },
+    {
+        "Id": "zg2g3h4i-7b8c-9d0e-1b2a-3e4f5c6d7b8a",
+        "Code": "CA_PHE_SUA",
+        "ProductCode": "CPS_035",
+        "ProductName": "Cà Phê Sữa",
+        "Slug": "ca-phe-sua",
+        "Tagline": "Cà phê sữa truyền thống",
+        "Description": "Cà phê sữa đậm đà với sữa đặc.",
+        "ShortDescription": "Cà phê sữa",
+        "BaseImageUrl": "images/products/ca_phe_sua.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViDang", "ViBeo"],
+        "SweetnessLevel": "NgotVua",
+        "IsFeatured": true,
+        "Highlights": ["MonTruyenThong"],
+        "PriceRange": {
+            "MinAmount": 18000,
+            "MaxAmount": 20000,
+            "Currency": "VND",
+            "Display": "18K - 20K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "300ml",
+                "BasePrice": {
+                    "Amount": 18000,
+                    "Currency": "VND",
+                    "Display": "18K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "400ml",
+                "BasePrice": {
+                    "Amount": 20000,
+                    "Currency": "VND",
+                    "Display": "20K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Khuấy đều", "Uống lạnh"],
+        "PairingSuggestions": ["Bánh mì"],
+        "Benefits": ["Tỉnh táo"],
+        "StorySnippet": "Cà phê sữa Việt Nam",
+        "IsAvailable": true
+    },
+    {
+        "Id": "ah3h4i5j-8c9d-0e1f-2b3a-4e5f6c7d8b9a",
+        "Code": "CA_PHE_KEM_MUOI",
+        "ProductCode": "CPKM_036",
+        "ProductName": "Cà Phê Kem Muối",
+        "Slug": "ca-phe-kem-muoi",
+        "Tagline": "Cà phê với kem muối",
+        "Description": "Cà phê đậm đà kết hợp kem muối.",
+        "ShortDescription": "Cà phê kem muối",
+        "BaseImageUrl": "images/products/ca_phe_kem_muoi.jpg",
+        "GalleryImages": [],
+        "Category": ["F_CFE"],
+        "MainFlavors": ["ViDang", "ViBeo", "CoKem"],
+        "SweetnessLevel": "NgotNhe",
+        "IsFeatured": false,
+        "Highlights": [],
+        "PriceRange": {
+            "MinAmount": 20000,
+            "MaxAmount": 22000,
+            "Currency": "VND",
+            "Display": "20K - 22K"
+        },
+        "PriceNotes": "Giá thay đổi theo size",
+        "AvailableSizes": [
+            {
+                "SizeName": "Vừa",
+                "Volume": "300ml",
+                "BasePrice": {
+                    "Amount": 20000,
+                    "Currency": "VND",
+                    "Display": "20K"
+                }
+            },
+            {
+                "SizeName": "Lớn",
+                "Volume": "400ml",
+                "BasePrice": {
+                    "Amount": 22000,
+                    "Currency": "VND",
+                    "Display": "22K"
+                }
+            }
+        ],
+        "AvailableToppings": [],
+        "AvailableOptions": [],
+        "PreparationTips": ["Uống trực tiếp", "Tránh lắc mạnh"],
+        "PairingSuggestions": ["Bánh mặn"],
+        "Benefits": ["Tỉnh táo", "Thư giãn"],
+        "StorySnippet": "Cà phê với phong cách kem muối",
+        "IsAvailable": true
+    }
+]

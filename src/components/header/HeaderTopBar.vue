@@ -1,7 +1,7 @@
 <!-- src/components/HeaderTopBar.vue -->
 <template>
     <header
-        class="header-topbar sticky top-0 z-[997] bg-white transition-all duration-[--header-section-transition-duration]"
+        class="header-topbar sticky top-0 z-40 bg-white transition-all duration-[--header-section-transition-duration]"
     >
         <div class="container mx-auto px-4">
             <div class="header-content flex flex-col items-center gap-4 py-2">
@@ -12,7 +12,7 @@
                 >
                     <img
                         v-if="mergedProps.showLogoOption.image"
-                        src="@/assets/images/logos/logo.png"
+                        :src="logoUrl"
                         alt="Soli logo"
                         class="header-logo-image w-12 h-12 object-contain rounded-xl bg-white transition-all duration-300"
                     />
@@ -48,8 +48,9 @@
 </template>
 
 <script setup lang="ts">
-import { AppConstants } from '@/core/constants/app.constants';
-import { computed } from 'vue';
+import { AppConstants } from '@/core/constants/app';
+import { getAssetUrl } from '@/core/utils/assetsUrl';
+import { computed, onMounted, ref } from 'vue';
 
 interface LogoOptions {
     name?: boolean;
@@ -78,9 +79,15 @@ const mergedProps = computed(() => ({
 }));
 
 const capitalizeFirstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+
+const logoUrl = ref<string>('');
+
+onMounted(() => {
+    logoUrl.value = getAssetUrl('images/logos/logo.png');
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 /* Minimal scoped styles for non-Tailwind properties */
 .header-logo-image {
     object-fit: contain;
