@@ -72,7 +72,7 @@ import {
     type ProductFilterCriteria,
     SelectionType
 } from '@/types/product/product';
-import { defineEmits, defineProps, ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 
 // Define props: `filtersData` now expects the `Filters` object
 const props = defineProps<{

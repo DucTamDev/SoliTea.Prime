@@ -1,25 +1,38 @@
 <template>
-    <div class="">
-        <!-- Sections -->
+    <!-- <div class="">
+
         <section class="section section-content pb-5">
             <LandingBanner :autoplay="true" :autoplayInterval="4000" :showNavigators="true" :showIndicators="true" />
         </section>
 
-        <!-- Sections Product-->
+       
         <section class="section section-content pb-5">
             <LandingFeaturedProducts />
         </section>
 
-        <!-- Sections Business-->
+       
         <section class="section section-content pb-5">
             <LandingFranchise />
         </section>
+    </div> -->
+
+    <div v-for="(path, index) in source" :key="index">
+        <img :src="getAssetUrl(path)" alt="Welcome page" class="w-full" />
     </div>
 </template>
 
 <script setup lang="ts">
-import LandingBanner from '@/components/landing/LandingBanner.vue';
-import LandingFranchise from '@/components/landing/LandingFranchise.vue';
+import { getAssetUrl } from '@/core/utils/assetsUrl';
+import { onMounted, ref } from 'vue';
+
+const TOTAL_PAGES = 17;
+const source = ref<string[]>([]);
+
+const fetchHomePage = () => {
+    source.value = Array.from({ length: TOTAL_PAGES }, (_, i) => `images/welcome/page-${i + 1}.jpg`);
+};
+
+onMounted(fetchHomePage);
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped></style>
